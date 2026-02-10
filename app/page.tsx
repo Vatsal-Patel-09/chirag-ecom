@@ -1,144 +1,311 @@
+'use client';
+
 import Link from 'next/link';
-import Image from 'next/image';
-import { prisma } from './lib/prisma';
-import { ShoppingBag, TrendingUp, Shield, Truck } from 'lucide-react';
+import { ShoppingBag, Truck, Shield, Heart, Star, TrendingUp, Users, CreditCard } from 'lucide-react';
 
-export default async function Home() {
-  const products = await prisma.product.findMany({
-    orderBy: {
-      createdAt: 'desc',
-    },
-  });
-
+export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500 text-white py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-6xl md:text-7xl font-extrabold mb-6 animate-fade-in">
-            Welcome to T-Shirt Store
-          </h1>
-          <p className="text-2xl md:text-3xl mb-8 text-blue-100">
-            Discover Premium Quality T-Shirts for Every Style
-          </p>
-          <a
-            href="#products"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transform hover:scale-105 transition-all shadow-xl"
-          >
-            Shop Now
-          </a>
+      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+              Premium T-Shirts for Every Style
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
+              Discover our exclusive collection of high-quality t-shirts. From casual to premium, find your perfect fit.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/products"
+                className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl"
+              >
+                Shop Now
+              </Link>
+              <Link
+                href="/products?category=New Arrivals"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all"
+              >
+                New Arrivals
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="rgb(249, 250, 251)"/>
-          </svg>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <Users className="w-12 h-12 text-purple-600" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">50K+</div>
+              <div className="text-gray-600">Happy Customers</div>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <ShoppingBag className="w-12 h-12 text-blue-600" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">60+</div>
+              <div className="text-gray-600">Products</div>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <Star className="w-12 h-12 text-yellow-500" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">4.8/5</div>
+              <div className="text-gray-600">Average Rating</div>
+            </div>
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                <TrendingUp className="w-12 h-12 text-green-600" />
+              </div>
+              <div className="text-4xl font-bold text-gray-900 mb-2">100%</div>
+              <div className="text-gray-600">Quality Guaranteed</div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="inline-block p-4 bg-blue-100 rounded-full mb-4">
-                <Truck className="h-8 w-8 text-blue-600" />
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Why Choose Us?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We provide the best shopping experience with premium quality products and exceptional service
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center group hover:transform hover:scale-105 transition-all">
+              <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-2xl transition-shadow">
+                <Truck className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 text-lg mb-2">Free Shipping</h3>
-              <p className="text-gray-600 text-sm">On all orders over $50</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Get your orders delivered within 5-7 working days. Track your package in real-time.
+              </p>
             </div>
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="inline-block p-4 bg-green-100 rounded-full mb-4">
-                <Shield className="h-8 w-8 text-green-600" />
+            <div className="text-center group hover:transform hover:scale-105 transition-all">
+              <div className="bg-gradient-to-br from-purple-500 to-pink-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-2xl transition-shadow">
+                <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 text-lg mb-2">Secure Payment</h3>
-              <p className="text-gray-600 text-sm">100% secure transactions</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">100% Secure</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Your data is safe with us. We use industry-standard encryption for all transactions.
+              </p>
             </div>
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="inline-block p-4 bg-purple-100 rounded-full mb-4">
-                <TrendingUp className="h-8 w-8 text-purple-600" />
+            <div className="text-center group hover:transform hover:scale-105 transition-all">
+              <div className="bg-gradient-to-br from-pink-500 to-red-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-2xl transition-shadow">
+                <Heart className="w-10 h-10 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 text-lg mb-2">Best Quality</h3>
-              <p className="text-gray-600 text-sm">Premium fabric materials</p>
-            </div>
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="inline-block p-4 bg-pink-100 rounded-full mb-4">
-                <ShoppingBag className="h-8 w-8 text-pink-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 text-lg mb-2">Easy Returns</h3>
-              <p className="text-gray-600 text-sm">30-day return policy</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Premium Quality</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Made from 100% cotton with superior stitching. Comfort that lasts wash after wash.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Products Section */}
-      <section id="products" className="py-16 bg-gradient-to-b from-white to-gray-50">
+      {/* Categories Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Our Collection
+              Shop by Category
             </h2>
             <p className="text-xl text-gray-600">
-              Explore our carefully curated selection of premium t-shirts
+              Find the perfect t-shirt for every occasion
             </p>
           </div>
-        
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <Link
-                key={product.id}
-                href={`/products/${product.id}`}
-                className="group bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="relative h-72 w-full overflow-hidden bg-gray-100">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  {product.stock < 10 && product.stock > 0 && (
-                    <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
-                      Only {product.stock} left!
-                    </div>
-                  )}
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-semibold bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
-                      {product.category}
-                    </span>
-                    <span className="text-xs text-gray-500">{product.color}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                    {product.description}
-                  </p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-3xl font-bold text-blue-600">
-                      ${product.price.toFixed(2)}
-                    </span>
-                    <span className={`text-sm font-medium ${product.stock > 0 ? 'text-green-600' : 'text-red-600'}`}>
-                      {product.stock > 0 ? '✓ In Stock' : '✗ Out of Stock'}
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
+          <div className="grid md:grid-cols-4 gap-6">
+            <Link
+              href="/products?category=Casual"
+              className="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all transform hover:scale-105 group"
+            >
+              <div className="text-5xl mb-4">👕</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                Casual
+              </h3>
+              <p className="text-gray-600">Everyday comfort</p>
+            </Link>
+            <Link
+              href="/products?category=Graphic"
+              className="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all transform hover:scale-105 group"
+            >
+              <div className="text-5xl mb-4">🎨</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                Graphic
+              </h3>
+              <p className="text-gray-600">Express yourself</p>
+            </Link>
+            <Link
+              href="/products?category=Sports"
+              className="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all transform hover:scale-105 group"
+            >
+              <div className="text-5xl mb-4">⚽</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                Sports
+              </h3>
+              <p className="text-gray-600">Active lifestyle</p>
+            </Link>
+            <Link
+              href="/products?category=Premium"
+              className="bg-white rounded-2xl p-8 text-center hover:shadow-2xl transition-all transform hover:scale-105 group"
+            >
+              <div className="text-5xl mb-4">⭐</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                Premium
+              </h3>
+              <p className="text-gray-600">Luxury feel</p>
+            </Link>
           </div>
+        </div>
+      </section>
 
-          {products.length === 0 && (
-            <div className="text-center py-20">
-              <ShoppingBag className="h-24 w-24 text-gray-300 mx-auto mb-4" />
-              <p className="text-gray-500 text-xl">
-                No products available. Please seed the database.
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-gray-600">
+              Join thousands of satisfied customers
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "Best quality t-shirts I've ever bought! The fabric is soft and the fit is perfect. Will definitely order more!"
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                  AK
+                </div>
+                <div className="ml-4">
+                  <div className="font-semibold text-gray-900">Amit Kumar</div>
+                  <div className="text-sm text-gray-600">Delhi</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "Fast delivery and excellent customer service. The graphic prints are amazing and haven't faded after multiple washes."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center text-white font-bold">
+                  PS
+                </div>
+                <div className="ml-4">
+                  <div className="font-semibold text-gray-900">Priya Sharma</div>
+                  <div className="text-sm text-gray-600">Mumbai</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-2xl p-8 hover:shadow-xl transition-shadow">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "Great value for money! The premium collection is worth every penny. Highly recommended for anyone looking for quality tees."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-red-600 rounded-full flex items-center justify-center text-white font-bold">
+                  RV
+                </div>
+                <div className="ml-4">
+                  <div className="font-semibold text-gray-900">Rahul Verma</div>
+                  <div className="text-sm text-gray-600">Bangalore</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Payment & Trust Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl p-12 shadow-xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Safe & Secure Shopping
+              </h2>
+              <p className="text-gray-600 text-lg">
+                Multiple payment options for your convenience
               </p>
             </div>
-          )}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <CreditCard className="w-16 h-16 text-purple-600 mx-auto mb-4" />
+                <h3 className="font-semibold text-gray-900 mb-2">All Payment Methods</h3>
+                <p className="text-gray-600 text-sm">Credit Card, Debit Card, UPI, COD</p>
+              </div>
+              <div className="text-center">
+                <Shield className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-semibold text-gray-900 mb-2">Secure Checkout</h3>
+                <p className="text-gray-600 text-sm">SSL encrypted transactions</p>
+              </div>
+              <div className="text-center">
+                <Heart className="w-16 h-16 text-pink-600 mx-auto mb-4" />
+                <h3 className="font-semibold text-gray-900 mb-2">30-Day Returns</h3>
+                <p className="text-gray-600 text-sm">Easy returns and exchanges</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Upgrade Your Wardrobe?
+          </h2>
+          <p className="text-xl mb-10 text-white/90">
+            Browse our collection of premium t-shirts and find your perfect style today
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/products"
+              className="bg-white text-purple-600 px-10 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl inline-flex items-center justify-center"
+            >
+              <ShoppingBag className="w-5 h-5 mr-2" />
+              Shop All Products
+            </Link>
+            <Link
+              href="/products?sale=true"
+              className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all inline-flex items-center justify-center"
+            >
+              <Star className="w-5 h-5 mr-2" />
+              View Sale Items
+            </Link>
+          </div>
+          <div className="mt-12 text-white/80">
+            <p className="text-sm">
+              ✨ Use code <span className="font-bold bg-white/20 px-3 py-1 rounded-full">FIRSTORDER</span> for 15% off your first purchase
+            </p>
+          </div>
         </div>
       </section>
     </div>

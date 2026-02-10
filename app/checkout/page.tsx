@@ -50,6 +50,22 @@ export default function CheckoutPage() {
       });
 
       if (response.ok) {
+        const orderData = await response.json();
+        
+        // Send confirmation email
+        await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: formData.email,
+            name: formData.name,
+            orderId: orderData.id,
+            totalAmount: totalPrice,
+          }),
+        });
+        
         // Show success modal
         setShowSuccess(true);
         

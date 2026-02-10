@@ -1,22 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
-  title: "T-Shirt Store - Your Perfect Tee Awaits",
-  description: "Shop premium quality t-shirts for men and women",
+  title: "T-Shirt Store - Premium Quality T-Shirts",
+  description: "Discover our collection of 60+ premium t-shirts for men, women, and kids",
 };
 
 export default function RootLayout({
@@ -26,13 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
-      >
+      <body>
+        <Toaster position="top-center" />
         <Navbar />
-        <main className="flex-1">
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>
