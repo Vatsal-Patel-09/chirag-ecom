@@ -1,41 +1,214 @@
-# Build-Ecommerce-Website-With-HTML-CSS-JavaScript
+# T-Shirt E-Commerce Website
 
-[<img alt="Build-Responsive-Ecommerce-Website-With-HTML-CSS-JavaScript" width="100%" src="https://github.com/tech2etc/Youtube-Tutorials/blob/main/Build-Responsive-Ecommerce-Website-With-HTML-CSS-JavaScript.png?raw=true" />](https://www.youtube.com/playlist?list=PL9bD98LkBR7O4_SVeN8IXLQRjrGontmbT)
+A modern, full-stack e-commerce website built with Next.js for selling t-shirts. This is a college project demonstrating a complete shopping experience with product browsing, cart management, and checkout functionality.
 
-## Why you need this course?
-Creating an e-commerce website using HTML, CSS, and JavaScript can be a challenging and rewarding project that allows you to learn and develop a wide range of skills. Some of the things you might learn while creating an e-commerce website include:
+## Features
 
-- HTML: HTML (HyperText Markup Language) is the standard markup language for creating web pages. By creating an e-commerce website, you will have the opportunity to learn how to use HTML to structure and format the content of your website, including headings, paragraphs, lists, links, images, and forms.
+- 🛍️ Browse T-shirt products with images and details
+- 🔍 View individual product pages
+- 🛒 Add products to cart with size selection
+- 📦 Shopping cart with quantity management
+- 💳 Checkout process with customer information form
+- ✅ Mock payment confirmation (no real payment integration)
+- 📱 Responsive design for all devices
+- 🎨 Modern UI with Tailwind CSS
 
-- CSS: CSS (Cascading Style Sheets) is a stylesheet language used for describing the look and formatting of a document written in HTML. By creating an e-commerce website, you will have the opportunity to learn how to use CSS to control the layout, colors, fonts, and other visual aspects of your website.
+## Tech Stack
 
-- JavaScript: JavaScript is a programming language that is commonly used to add interactivity and dynamic behavior to websites. By creating an e-commerce website, you will have the opportunity to learn how to use JavaScript to create interactive features, such as menus, forms, and image galleries, and to manipulate the HTML and CSS elements on your website.
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Database:** PostgreSQL with Prisma ORM
+- **State Management:** Zustand
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Package Manager:** pnpm
 
-- E-commerce concepts: In addition to learning about HTML, CSS, and JavaScript, creating an e-commerce website also provides the opportunity to learn about the principles and practices of e-commerce. This might include topics such as product catalog management, shopping cart functionality, payment processing, and order fulfillment.
+## Getting Started
 
-Overall, creating an e-commerce website using HTML, CSS, and JavaScript can be a rewarding and challenging project that allows you to learn a wide range of technical and business skills.
+### Prerequisites
 
-## Adding Bootstrap
-In addition to HTML, CSS, and JavaScript, using Bootstrap can also be a helpful way to create an e-commerce website. Bootstrap is a front-end framework that provides pre-designed HTML, CSS, and JavaScript components that can be used to create responsive, mobile-first websites.
+- Node.js 18+ installed
+- PostgreSQL database (local or cloud)
+- pnpm package manager
 
-Some of the things you might learn by using Bootstrap to create an e-commerce website include:
+### Installation Steps
 
-- Responsive design: Bootstrap is designed to be responsive, which means that it adjusts the layout and styling of a website to provide an optimal viewing experience on a wide range of devices, from small smartphones to large desktop monitors. By using Bootstrap, you can learn how to create websites that look and function well on different devices and screen sizes.
+1. **Clone or navigate to the project directory**
+   ```bash
+   cd chirag-ecom
+   ```
 
-- Pre-designed components: Bootstrap includes a wide range of pre-designed components, such as buttons, forms, navbars, and grids, that can be easily added to your website using HTML and CSS classes. By using these components, you can save time and effort in creating the layout and styling of your website.
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
 
-- JavaScript plugins: Bootstrap also includes a number of JavaScript plugins that can be used to add interactive features to your website, such as modals, tabs, and carousels. By using these plugins, you can add interactive elements to your website without having to write custom JavaScript code.
+3. **Set up your database**
+   
+   Open the `.env` file and replace the `DATABASE_URL` with your actual database connection string:
+   
+   ```env
+   DATABASE_URL="postgresql://username:password@localhost:5432/database_name"
+   ```
+   
+   **Options for database:**
+   - Local PostgreSQL: `postgresql://postgres:postgres@localhost:5432/chirag_ecom`
+   - Railway: https://railway.app/
+   - Supabase: https://supabase.com/
+   - Neon: https://neon.tech/
+   - PlanetScale: https://planetscale.com/
 
-Overall, using Bootstrap can be a helpful way to create an e-commerce website by providing pre-designed components and tools that can save time and effort in the development process.
+4. **Run database migrations**
+   ```bash
+   pnpm db:push
+   ```
+   
+   Or if you prefer migrations:
+   ```bash
+   pnpm db:migrate
+   ```
 
-## Project Sections
-- Part1: Responsive Home Page Design.
-- Part2: Shop Page & Single Product Page.
-- Part3: Blog Page.
-- Part4: Ecommerce Shopping Cart.
+5. **Generate Prisma Client**
+   ```bash
+   pnpm db:generate
+   ```
 
-Here you will find all the images I'm using to create this responsive ecommerce website. In future image folder can update.
+6. **Seed the database with sample products**
+   ```bash
+   pnpm db:seed
+   ```
 
-Get the full source code from [here1](https://www.buymeacoffee.com/tech2etc/e/42639).
+7. **Start the development server**
+   ```bash
+   pnpm dev
+   ```
 
-Get the full source code from [here2](https://ko-fi.com/s/58e9932dcc).
+8. **Open your browser**
+   
+   Visit [http://localhost:3000](http://localhost:3000)
+
+## Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production |
+| `pnpm start` | Start production server |
+| `pnpm db:push` | Push schema changes to database |
+| `pnpm db:migrate` | Create and run migrations |
+| `pnpm db:seed` | Seed database with sample products |
+| `pnpm db:studio` | Open Prisma Studio (database GUI) |
+| `pnpm db:generate` | Generate Prisma Client |
+
+## Database Schema
+
+### Product
+- id, name, description, price
+- image, category, size[], color
+- stock, createdAt, updatedAt
+
+### Order
+- id, customerName, email, phone
+- address, totalAmount, status
+- createdAt, updatedAt
+
+### OrderItem
+- id, orderId, productId
+- quantity, price, size
+
+## Project Structure
+
+```
+chirag-ecom/
+├── app/
+│   ├── api/
+│   │   ├── products/         # Product API routes
+│   │   └── orders/           # Order API routes
+│   ├── components/
+│   │   └── Navbar.tsx        # Navigation component
+│   ├── store/
+│   │   └── cart-store.ts     # Zustand cart state
+│   ├── lib/
+│   │   └── prisma.ts         # Prisma client instance
+│   ├── products/
+│   │   └── [id]/
+│   │       └── page.tsx      # Product detail page
+│   ├── cart/
+│   │   └── page.tsx          # Shopping cart page
+│   ├── checkout/
+│   │   └── page.tsx          # Checkout page
+│   ├── layout.tsx            # Root layout
+│   ├── page.tsx              # Homepage
+│   └── globals.css           # Global styles
+├── prisma/
+│   ├── schema.prisma         # Database schema
+│   └── seed.ts               # Database seed script
+├── .env                      # Environment variables
+└── package.json              # Dependencies and scripts
+```
+
+## Usage Flow
+
+1. **Browse Products** - View all available t-shirts on the homepage
+2. **Select Product** - Click on a product to view details
+3. **Choose Size** - Select your preferred size
+4. **Add to Cart** - Add the product to your shopping cart
+5. **View Cart** - Review your cart items and adjust quantities
+6. **Checkout** - Enter shipping information
+7. **Pay** - Click "Pay Now" to complete the order
+8. **Success** - View payment success modal
+
+## Database Management
+
+### View Database with Prisma Studio
+```bash
+pnpm db:studio
+```
+This opens a visual interface at http://localhost:5555 where you can view and edit data.
+
+### Reset Database
+If you need to reset the database:
+```bash
+pnpm db:push --force-reset
+pnpm db:seed
+```
+
+## Environment Variables
+
+Create a `.env` file with the following:
+
+```env
+DATABASE_URL="your_database_connection_string_here"
+```
+
+## Notes
+
+- This is a college project and uses mock payment (no real payment gateway integration)
+- The payment success is simulated with a modal dialog
+- Cart data is persisted in browser localStorage
+- Images are served from Unsplash CDN
+
+## Troubleshooting
+
+### Database Connection Issues
+- Verify your DATABASE_URL is correct
+- Ensure PostgreSQL is running
+- Check firewall/network settings
+
+### Build Errors
+- Run `pnpm db:generate` to regenerate Prisma Client
+- Clear `.next` folder: `rm -rf .next`
+- Reinstall dependencies: `rm -rf node_modules && pnpm install`
+
+### Image Loading Issues
+- Images are loaded from Unsplash
+- Ensure internet connection is active
+- Check Next.js image configuration in `next.config.ts`
+
+## License
+
+This project is for educational purposes only.
+
+## Author
+
+Created as a college project for learning full-stack web development.
