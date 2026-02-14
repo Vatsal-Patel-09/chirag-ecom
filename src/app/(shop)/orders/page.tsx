@@ -9,7 +9,7 @@ import { Package, ChevronRight } from "lucide-react";
 const statusColors: Record<string, string> = {
   pending: "bg-yellow-100 text-yellow-700",
   confirmed: "bg-blue-100 text-blue-700",
-  shipped: "bg-purple-100 text-purple-700",
+  shipped: "bg-accent-100 text-accent-700",
   delivered: "bg-green-100 text-green-700",
   cancelled: "bg-red-100 text-red-700",
 };
@@ -32,17 +32,17 @@ export default async function OrdersPage() {
 
   if (userOrders.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-20 text-center">
-        <Package size={64} className="mx-auto text-gray-300 mb-6" />
-        <h1 className="text-2xl font-bold text-gray-900 mb-3">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 py-20 text-center">
+        <Package size={64} className="mx-auto text-warm-300 mb-6" />
+        <h1 className="text-2xl font-bold font-marker text-warm-900 mb-3">
           No Orders Yet
         </h1>
-        <p className="text-gray-500 mb-8">
+        <p className="text-warm-500 mb-8">
           Start shopping to see your orders here.
         </p>
         <Link
           href="/products"
-          className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-medium transition"
+          className="inline-block sketchy-border bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 font-medium transition"
         >
           Browse Products
         </Link>
@@ -51,8 +51,8 @@ export default async function OrdersPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">
+    <div className="max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+      <h1 className="text-3xl font-bold font-marker text-warm-900 mb-8">
         My Orders
       </h1>
       <div className="space-y-4">
@@ -60,23 +60,23 @@ export default async function OrdersPage() {
           <Link
             key={order.id}
             href={`/orders/${order.id}`}
-            className="block bg-white border border-gray-200 rounded-xl p-6 hover:border-purple-300 hover:shadow-sm transition"
+            className="block bg-warm-50 sketchy-border-light p-6 hover:border-primary-300 hover:sketch-shadow-sm transition"
           >
             <div className="flex items-center justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <h2 className="font-semibold text-gray-900">
+                  <h2 className="font-semibold text-warm-900">
                     {order.orderNumber}
                   </h2>
                   <span
-                    className={`text-xs font-medium px-2.5 py-1 rounded-full capitalize ${
+                    className={`cartoon-badge text-xs font-medium px-2.5 py-1 capitalize ${
                       statusColors[order.status] || "bg-gray-100 text-gray-600"
                     }`}
                   >
                     {order.status}
                   </span>
                 </div>
-                <p className="text-gray-500 text-sm">
+                <p className="text-warm-500 text-sm">
                   Placed on{" "}
                   {new Date(order.createdAt).toLocaleDateString("en-IN", {
                     day: "numeric",
@@ -86,10 +86,10 @@ export default async function OrdersPage() {
                 </p>
               </div>
               <div className="flex items-center gap-4">
-                <p className="font-bold text-gray-900">
+                <p className="font-bold text-warm-900">
                   {formatPrice(parseFloat(order.total))}
                 </p>
-                <ChevronRight size={20} className="text-gray-400" />
+                <ChevronRight size={20} className="text-warm-400" />
               </div>
             </div>
           </Link>

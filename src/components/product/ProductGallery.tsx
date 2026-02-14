@@ -12,9 +12,9 @@ export default function ProductGallery({ images, name }: Props) {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 tilt-1">
       {/* Main image */}
-      <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-100">
+      <div className="relative aspect-square sketchy-border overflow-hidden bg-warm-100 sketch-shadow">
         <Image
           src={images[selectedImage] || images[0]}
           alt={name}
@@ -31,10 +31,10 @@ export default function ProductGallery({ images, name }: Props) {
             <button
               key={index}
               onClick={() => setSelectedImage(index)}
-              className={`relative w-20 h-20 rounded-lg overflow-hidden border-2 transition ${
+              className={`relative w-20 h-20 sketchy-border-sm overflow-hidden transition ${
                 index === selectedImage
-                  ? "border-purple-600"
-                  : "border-transparent hover:border-gray-300"
+                  ? "border-primary-600"
+                  : "border-transparent hover:border-warm-400"
               }`}
             >
               <Image

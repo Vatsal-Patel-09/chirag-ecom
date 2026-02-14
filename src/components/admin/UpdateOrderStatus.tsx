@@ -46,7 +46,7 @@ export function UpdateOrderStatus({
       value={status}
       onChange={(e) => handleChange(e.target.value)}
       disabled={loading}
-      className="text-xs border border-gray-300 rounded-lg px-2 py-1.5 bg-white focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none capitalize disabled:opacity-50"
+      className="text-xs border border-warm-300 rounded-lg px-2 py-1.5 bg-white focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none capitalize disabled:opacity-50"
     >
       {statuses.map((s) => (
         <option key={s} value={s} className="capitalize">

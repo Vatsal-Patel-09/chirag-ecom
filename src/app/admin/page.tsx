@@ -62,7 +62,7 @@ async function getStats() {
 const statusColors: Record<string, string> = {
   pending: "bg-yellow-100 text-yellow-700",
   confirmed: "bg-blue-100 text-blue-700",
-  shipped: "bg-purple-100 text-purple-700",
+  shipped: "bg-indigo-100 text-indigo-700",
   delivered: "bg-green-100 text-green-700",
   cancelled: "bg-red-100 text-red-700",
 };
@@ -87,13 +87,13 @@ export default async function AdminDashboard() {
       label: "Products",
       value: stats.productCount.toString(),
       icon: Package,
-      color: "bg-purple-50 text-purple-600",
+      color: "bg-orange-50 text-orange-600",
     },
     {
       label: "Customers",
       value: stats.userCount.toString(),
       icon: UsersIcon,
-      color: "bg-purple-50 text-purple-600",
+      color: "bg-amber-50 text-amber-600",
     },
   ];
 
@@ -101,8 +101,8 @@ export default async function AdminDashboard() {
     <div>
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-gray-500 text-sm mt-1">
+          <h1 className="text-2xl font-bold text-warm-900 font-marker">Dashboard</h1>
+          <p className="text-warm-500 text-sm mt-1">
             Overview of your store
           </p>
         </div>
@@ -115,7 +115,7 @@ export default async function AdminDashboard() {
           return (
             <div
               key={stat.label}
-              className="bg-white rounded-xl p-5 border border-gray-200"
+              className="bg-warm-50 rounded-xl p-5 border border-warm-200"
             >
               <div className="flex items-center justify-between mb-3">
                 <div
@@ -125,33 +125,33 @@ export default async function AdminDashboard() {
                 </div>
                 <TrendingUp size={16} className="text-green-500" />
               </div>
-              <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-              <p className="text-gray-500 text-sm">{stat.label}</p>
+              <p className="text-2xl font-bold text-warm-900">{stat.value}</p>
+              <p className="text-warm-500 text-sm">{stat.label}</p>
             </div>
           );
         })}
       </div>
 
       {/* Recent Orders */}
-      <div className="bg-white rounded-xl border border-gray-200">
-        <div className="flex items-center justify-between p-6 border-b border-gray-100">
-          <h2 className="text-lg font-semibold text-gray-900">
+      <div className="bg-warm-50 rounded-xl border border-warm-200">
+        <div className="flex items-center justify-between p-6 border-b border-warm-100">
+          <h2 className="text-lg font-semibold text-warm-900">
             Recent Orders
           </h2>
           <Link
             href="/admin/orders"
-            className="text-purple-600 hover:text-purple-700 text-sm font-medium flex items-center gap-1"
+            className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center gap-1"
           >
             View All <ChevronRight size={14} />
           </Link>
         </div>
         {stats.recentOrders.length === 0 ? (
-          <p className="p-6 text-gray-500 text-sm">No orders yet.</p>
+          <p className="p-6 text-warm-500 text-sm">No orders yet.</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-left text-gray-500 border-b border-gray-100">
+                <tr className="text-left text-warm-500 border-b border-warm-100">
                   <th className="px-6 py-3 font-medium">Order</th>
                   <th className="px-6 py-3 font-medium">Customer</th>
                   <th className="px-6 py-3 font-medium">Status</th>
@@ -163,28 +163,28 @@ export default async function AdminDashboard() {
                 {stats.recentOrders.map((order: any) => (
                   <tr
                     key={order.id}
-                    className="border-b border-gray-50 hover:bg-gray-50 transition"
+                    className="border-b border-warm-100 hover:bg-warm-100 transition"
                   >
                     <td className="px-6 py-4">
                       <Link
                         href={`/admin/orders/${order.id}`}
-                        className="font-medium text-purple-600 hover:text-purple-700"
+                        className="font-medium text-primary-600 hover:text-primary-700"
                       >
                         {order.orderNumber}
                       </Link>
                     </td>
                     <td className="px-6 py-4">
-                      <p className="font-medium text-gray-900">
+                      <p className="font-medium text-warm-900">
                         {order.userName || "Unknown"}
                       </p>
-                      <p className="text-gray-400 text-xs">
+                      <p className="text-warm-400 text-xs">
                         {order.userEmail}
                       </p>
                     </td>
                     <td className="px-6 py-4">
                       <span
                         className={`text-xs font-medium px-2.5 py-1 rounded-full capitalize ${
-                          statusColors[order.status] || "bg-gray-100 text-gray-600"
+                          statusColors[order.status] || "bg-warm-200 text-warm-600"
                         }`}
                       >
                         {order.status}
@@ -193,8 +193,8 @@ export default async function AdminDashboard() {
                     <td className="px-6 py-4 font-medium">
                       {formatPrice(parseFloat(order.total))}
                     </td>
-                    <td className="px-6 py-4 text-gray-500">
-                      {new Date(order.createdAt).toLocaleDateString("en-US", {
+                    <td className="px-6 py-4 text-warm-500">
+                      {new Date(order.createdAt).toLocaleDateString("en-IN", {
                         day: "numeric",
                         month: "short",
                       })}

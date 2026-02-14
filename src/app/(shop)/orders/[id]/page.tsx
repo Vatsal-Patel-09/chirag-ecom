@@ -20,7 +20,7 @@ const statusSteps = [
 
 export default async function OrderDetailPage({ params }: Props) {
   const { id } = await params;
-  
+
   let order: any = null;
   let items: any[] = [];
 
@@ -50,20 +50,20 @@ export default async function OrderDetailPage({ params }: Props) {
   const statusIndex = statusSteps.findIndex((s) => s.key === order.status);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="max-w-4xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
       <Link
         href="/orders"
-        className="inline-flex items-center gap-2 text-gray-500 hover:text-purple-600 transition mb-6"
+        className="inline-flex items-center gap-2 text-warm-500 hover:text-primary-600 transition mb-6"
       >
         <ArrowLeft size={18} /> Back to Orders
       </Link>
 
       <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold font-marker text-warm-900">
             Order {order.orderNumber}
           </h1>
-          <p className="text-gray-500 text-sm mt-1">
+          <p className="text-warm-500 text-sm mt-1">
             Placed on{" "}
             {new Date(order.createdAt).toLocaleDateString("en-IN", {
               day: "numeric",
@@ -75,7 +75,7 @@ export default async function OrderDetailPage({ params }: Props) {
           </p>
         </div>
         <span
-          className={`text-sm font-medium px-3 py-1.5 rounded-full capitalize ${
+          className={`cartoon-badge text-sm font-medium px-3 py-1.5 capitalize ${
             order.status === "delivered"
               ? "bg-green-100 text-green-700"
               : order.status === "cancelled"
@@ -89,7 +89,7 @@ export default async function OrderDetailPage({ params }: Props) {
 
       {/* Status timeline */}
       {order.status !== "cancelled" && (
-        <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+        <div className="bg-warm-50 sketchy-border-light p-6 mb-6">
           <div className="flex items-center justify-between">
             {statusSteps.map((step, i) => {
               const isCompleted = i <= statusIndex;
@@ -97,19 +97,19 @@ export default async function OrderDetailPage({ params }: Props) {
               return (
                 <div key={step.key} className="flex-1 flex flex-col items-center relative">
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                      isCompleted ? "bg-green-100 text-green-600" : "bg-gray-100 text-gray-400"
+                    className={`w-10 h-10 sketchy-border-sm flex items-center justify-center ${
+                      isCompleted ? "bg-accent-100 text-accent-600" : "bg-warm-100 text-warm-400"
                     }`}
                   >
                     <Icon size={20} />
                   </div>
-                  <p className={`text-xs mt-2 font-medium ${isCompleted ? "text-green-600" : "text-gray-400"}`}>
+                  <p className={`text-xs mt-2 font-medium ${isCompleted ? "text-accent-600" : "text-warm-400"}`}>
                     {step.label}
                   </p>
                   {i < statusSteps.length - 1 && (
                     <div
                       className={`absolute top-5 left-[60%] w-[80%] h-0.5 ${
-                        i < statusIndex ? "bg-green-400" : "bg-gray-200"
+                        i < statusIndex ? "bg-accent-400" : "bg-warm-200"
                       }`}
                     />
                   )}
@@ -122,11 +122,11 @@ export default async function OrderDetailPage({ params }: Props) {
 
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         {/* Shipping address */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <h2 className="font-semibold text-gray-900 mb-3">Shipping Address</h2>
+        <div className="bg-warm-50 sketchy-border-light p-6">
+          <h2 className="font-semibold text-warm-900 font-caveat text-lg mb-3">Shipping Address</h2>
           {addr && (
-            <div className="text-gray-600 text-sm leading-relaxed">
-              <p className="font-medium text-gray-900">{addr.fullName}</p>
+            <div className="text-warm-600 text-sm leading-relaxed">
+              <p className="font-medium text-warm-900">{addr.fullName}</p>
               <p>{addr.addressLine1}</p>
               {addr.addressLine2 && <p>{addr.addressLine2}</p>}
               <p>{addr.city}, {addr.state} {addr.postalCode}</p>
@@ -137,34 +137,34 @@ export default async function OrderDetailPage({ params }: Props) {
         </div>
 
         {/* Order summary */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <h2 className="font-semibold text-gray-900 mb-3">Order Summary</h2>
+        <div className="bg-warm-50 sketchy-border-light p-6">
+          <h2 className="font-semibold text-warm-900 font-caveat text-lg mb-3">Order Summary</h2>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
-              <span className="text-gray-500">Subtotal</span>
-              <span className="font-medium">{formatPrice(total)}</span>
+              <span className="text-warm-500">Subtotal</span>
+              <span className="font-medium text-warm-900">{formatPrice(total)}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-500">Shipping</span>
+              <span className="text-warm-500">Shipping</span>
               <span className="font-medium text-green-600">Free</span>
             </div>
-            <div className="border-t border-gray-200 pt-2 flex justify-between">
-              <span className="font-semibold text-gray-900">Total</span>
-              <span className="font-bold text-lg">{formatPrice(total)}</span>
+            <div className="border-t border-warm-200 pt-2 flex justify-between">
+              <span className="font-semibold text-warm-900">Total</span>
+              <span className="font-bold text-lg text-warm-900">{formatPrice(total)}</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Order items */}
-      <div className="bg-white border border-gray-200 rounded-xl p-6">
-        <h2 className="font-semibold text-gray-900 mb-4">
+      <div className="bg-warm-50 sketchy-border-light p-6">
+        <h2 className="font-semibold text-warm-900 font-caveat text-lg mb-4">
           Items ({items.length})
         </h2>
         <div className="space-y-4">
           {items.map((item: any) => (
             <div key={item.id} className="flex items-center gap-4">
-              <div className="relative w-20 h-20 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+              <div className="relative w-20 h-20 sketchy-border-sm overflow-hidden bg-warm-100 flex-shrink-0">
                 <Image
                   src={item.productImage}
                   alt={item.productName}
@@ -173,12 +173,12 @@ export default async function OrderDetailPage({ params }: Props) {
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-medium text-gray-900">{item.productName}</p>
-                <p className="text-gray-500 text-sm">
-                  Qty: {item.quantity} × {formatPrice(parseFloat(item.price))}
+                <p className="font-medium text-warm-900">{item.productName}</p>
+                <p className="text-warm-500 text-sm">
+                  Qty: {item.quantity} x {formatPrice(parseFloat(item.price))}
                 </p>
               </div>
-              <p className="font-bold text-gray-900">
+              <p className="font-bold text-warm-900">
                 {formatPrice(parseFloat(item.price) * item.quantity)}
               </p>
             </div>

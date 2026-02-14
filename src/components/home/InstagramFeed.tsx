@@ -13,12 +13,12 @@ const images = [
 export default function InstagramFeed() {
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-warm-900 mb-3 font-marker hand-underline inline-block">
             Follow Us on Instagram
           </h2>
-          <p className="text-gray-500">@tshirtstore</p>
+          <p className="text-warm-500 font-caveat text-lg mt-4">@myotees</p>
         </div>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-4">
           {images.map((img, index) => (
@@ -27,7 +27,9 @@ export default function InstagramFeed() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative aspect-square rounded-lg overflow-hidden group"
+              className={`relative aspect-square sketchy-border-sm overflow-hidden group ${
+                index % 2 === 0 ? "tilt-1" : "tilt-2"
+              }`}
             >
               <Image
                 src={img}
@@ -35,7 +37,7 @@ export default function InstagramFeed() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition flex items-center justify-center">
+              <div className="absolute inset-0 bg-warm-900/0 group-hover:bg-warm-900/40 transition flex items-center justify-center">
                 <Instagram
                   size={28}
                   className="text-white opacity-0 group-hover:opacity-100 transition"

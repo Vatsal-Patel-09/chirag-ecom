@@ -21,14 +21,14 @@ export default async function AdminLayout({
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex">
+    <div className="min-h-screen bg-warm-100 flex">
       {/* Sidebar */}
-      <aside className="w-64 bg-gray-900 text-gray-300 flex-shrink-0 hidden md:flex flex-col">
-        <div className="p-6 border-b border-gray-700">
-          <h1 className="text-xl font-bold text-white">
+      <aside className="w-64 bg-warm-900 text-warm-300 flex-shrink-0 hidden md:flex flex-col">
+        <div className="p-6 border-b border-warm-700">
+          <h1 className="text-xl font-bold text-white font-marker">
             Admin Panel
           </h1>
-          <p className="text-gray-500 text-xs mt-1">TeeStore</p>
+          <p className="text-warm-500 text-xs mt-1 brand-name">MYOTEES</p>
         </div>
 
         <nav className="flex-1 py-4 px-3 space-y-1">
@@ -38,7 +38,7 @@ export default async function AdminLayout({
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm hover:bg-gray-800 hover:text-white transition"
+                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm hover:bg-warm-800 hover:text-white transition"
               >
                 <Icon size={18} />
                 {item.label}
@@ -47,10 +47,10 @@ export default async function AdminLayout({
           })}
         </nav>
 
-        <div className="p-3 border-t border-gray-700 space-y-1">
+        <div className="p-3 border-t border-warm-700 space-y-1">
           <Link
             href="/"
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm hover:bg-gray-800 hover:text-white transition"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm hover:bg-warm-800 hover:text-white transition"
           >
             <ArrowLeft size={18} />
             Back to Store
@@ -59,7 +59,7 @@ export default async function AdminLayout({
       </aside>
 
       {/* Mobile header */}
-      <div className="md:hidden fixed top-0 inset-x-0 z-50 bg-gray-900 text-white px-4 py-3 flex items-center justify-between">
+      <div className="md:hidden fixed top-0 inset-x-0 z-50 bg-warm-900 text-white px-4 py-3 flex items-center justify-between">
         <h1 className="font-bold">Admin</h1>
         <div className="flex gap-2">
           {navItems.map((item) => {
@@ -68,7 +68,7 @@ export default async function AdminLayout({
               <Link
                 key={item.href}
                 href={item.href}
-                className="p-2 hover:bg-gray-800 rounded-lg transition"
+                className="p-2 hover:bg-warm-800 rounded-lg transition"
                 title={item.label}
               >
                 <Icon size={18} />

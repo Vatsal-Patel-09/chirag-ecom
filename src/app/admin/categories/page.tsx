@@ -100,32 +100,32 @@ export default function AdminCategoriesPage() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Categories</h1>
-        <p className="text-gray-500 text-sm mt-1">
+        <h1 className="text-2xl font-bold font-marker text-warm-900">Categories</h1>
+        <p className="text-warm-500 text-sm mt-1">
           {categories.length} categories
         </p>
       </div>
 
       {/* Add form */}
-      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
-        <h2 className="font-semibold text-gray-900 mb-4">Add Category</h2>
+      <div className="bg-warm-50 rounded-xl border border-warm-200 p-6 mb-6">
+        <h2 className="font-semibold text-warm-900 mb-4">Add Category</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <input
             value={newName}
             onChange={(e) => setNewName(e.target.value)}
-            className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+            className="flex-1 px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
             placeholder="Category name"
           />
           <input
             value={newImage}
             onChange={(e) => setNewImage(e.target.value)}
-            className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+            className="flex-1 px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
             placeholder="Image path (optional)"
           />
           <button
             onClick={handleAdd}
             disabled={saving}
-            className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2.5 rounded-lg font-medium transition disabled:opacity-50"
+            className="flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-lg font-medium transition disabled:opacity-50"
           >
             {saving ? <Loader2 size={16} className="animate-spin" /> : <Plus size={16} />}
             Add
@@ -136,26 +136,26 @@ export default function AdminCategoriesPage() {
       {/* List */}
       {loading ? (
         <div className="flex justify-center py-12">
-          <Loader2 size={32} className="animate-spin text-purple-600" />
+          <Loader2 size={32} className="animate-spin text-primary-600" />
         </div>
       ) : categories.length === 0 ? (
-        <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
-          <Tag size={48} className="mx-auto text-gray-300 mb-4" />
-          <p className="text-gray-500">No categories yet.</p>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-12 text-center">
+          <Tag size={48} className="mx-auto text-warm-300 mb-4" />
+          <p className="text-warm-500">No categories yet.</p>
         </div>
       ) : (
-        <div className="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100">
+        <div className="bg-warm-50 rounded-xl border border-warm-200 divide-y divide-warm-100">
           {categories.map((cat) => (
             <div
               key={cat.id}
-              className="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition"
+              className="flex items-center justify-between px-6 py-4 hover:bg-warm-100 transition"
             >
               {editId === cat.id ? (
                 <div className="flex items-center gap-2 flex-1">
                   <input
                     value={editName}
                     onChange={(e) => setEditName(e.target.value)}
-                    className="flex-1 px-3 py-1.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none text-sm"
+                    className="flex-1 px-3 py-1.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none text-sm"
                     autoFocus
                   />
                   <button
@@ -166,7 +166,7 @@ export default function AdminCategoriesPage() {
                   </button>
                   <button
                     onClick={() => setEditId(null)}
-                    className="text-gray-400 hover:text-gray-600 p-1"
+                    className="text-warm-400 hover:text-warm-600 p-1"
                   >
                     <X size={16} />
                   </button>
@@ -174,8 +174,8 @@ export default function AdminCategoriesPage() {
               ) : (
                 <>
                   <div>
-                    <p className="font-medium text-gray-900">{cat.name}</p>
-                    <p className="text-gray-400 text-xs">/{cat.slug}</p>
+                    <p className="font-medium text-warm-900">{cat.name}</p>
+                    <p className="text-warm-400 text-xs">/{cat.slug}</p>
                   </div>
                   <div className="flex items-center gap-2">
                     <button
@@ -183,7 +183,7 @@ export default function AdminCategoriesPage() {
                         setEditId(cat.id);
                         setEditName(cat.name);
                       }}
-                      className="text-purple-600 hover:text-purple-700 p-1.5 rounded-lg hover:bg-purple-50 transition"
+                      className="text-primary-600 hover:text-primary-700 p-1.5 rounded-lg hover:bg-primary-50 transition"
                     >
                       <Edit size={16} />
                     </button>

@@ -30,7 +30,7 @@ export default async function AdminOrdersPage() {
   const statusColors: Record<string, string> = {
     pending: "bg-yellow-100 text-yellow-700",
     confirmed: "bg-blue-100 text-blue-700",
-    shipped: "bg-purple-100 text-purple-700",
+    shipped: "bg-indigo-100 text-indigo-700",
     delivered: "bg-green-100 text-green-700",
     cancelled: "bg-red-100 text-red-700",
   };
@@ -38,22 +38,22 @@ export default async function AdminOrdersPage() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Orders</h1>
-        <p className="text-gray-500 text-sm mt-1">
+        <h1 className="text-2xl font-bold font-marker text-warm-900">Orders</h1>
+        <p className="text-warm-500 text-sm mt-1">
           {allOrders.length} orders
         </p>
       </div>
 
       {allOrders.length === 0 ? (
-        <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
-          <ShoppingCart size={48} className="mx-auto text-gray-300 mb-4" />
-          <p className="text-gray-500">No orders yet.</p>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-12 text-center">
+          <ShoppingCart size={48} className="mx-auto text-warm-300 mb-4" />
+          <p className="text-warm-500">No orders yet.</p>
         </div>
       ) : (
-        <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+        <div className="bg-warm-50 rounded-xl border border-warm-200 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-left text-gray-500 border-b border-gray-100">
+              <tr className="text-left text-warm-500 border-b border-warm-100">
                 <th className="px-6 py-3 font-medium">Order</th>
                 <th className="px-6 py-3 font-medium">Customer</th>
                 <th className="px-6 py-3 font-medium">Date</th>
@@ -66,26 +66,26 @@ export default async function AdminOrdersPage() {
               {allOrders.map((order: any) => (
                 <tr
                   key={order.id}
-                  className="border-b border-gray-50 hover:bg-gray-50 transition"
+                  className="border-b border-warm-100 hover:bg-warm-100 transition"
                 >
                   <td className="px-6 py-4">
                     <Link
                       href={`/admin/orders/${order.id}`}
-                      className="font-medium text-purple-600 hover:text-purple-700"
+                      className="font-medium text-primary-600 hover:text-primary-700"
                     >
                       {order.orderNumber}
                     </Link>
                   </td>
                   <td className="px-6 py-4">
-                    <p className="font-medium text-gray-900">
+                    <p className="font-medium text-warm-900">
                       {order.userName || "Unknown"}
                     </p>
-                    <p className="text-gray-400 text-xs">
+                    <p className="text-warm-400 text-xs">
                       {order.userEmail}
                     </p>
                   </td>
-                  <td className="px-6 py-4 text-gray-500">
-                    {new Date(order.createdAt).toLocaleDateString("en-US", {
+                  <td className="px-6 py-4 text-warm-500">
+                    {new Date(order.createdAt).toLocaleDateString("en-IN", {
                       day: "numeric",
                       month: "short",
                       year: "numeric",
@@ -98,7 +98,7 @@ export default async function AdminOrdersPage() {
                     <span
                       className={`text-xs font-medium px-2.5 py-1 rounded-full capitalize ${
                         statusColors[order.status] ||
-                        "bg-gray-100 text-gray-600"
+                        "bg-warm-200 text-warm-600"
                       }`}
                     >
                       {order.status}

@@ -34,7 +34,7 @@ export default function AddToCartButton({ product, disabled }: Props) {
     addItem({
       ...product,
       quantity,
-      ...(selectedSize && { size: selectedSize }),
+      size: selectedSize || product.sizes?.[0] || "One Size",
       ...(product.color && { color: product.color }),
     });
     setAdded(true);
@@ -47,16 +47,16 @@ export default function AddToCartButton({ product, disabled }: Props) {
       {/* Size selector */}
       {product.sizes && product.sizes.length > 0 && (
         <div>
-          <p className="text-sm font-medium text-gray-700 mb-2">Select Size</p>
+          <p className="text-sm font-medium text-warm-700 font-caveat text-base mb-2">Select Size</p>
           <div className="flex flex-wrap gap-2">
             {product.sizes.map((size) => (
               <button
                 key={size}
                 onClick={() => setSelectedSize(size)}
-                className={`px-4 py-2 rounded-full text-sm font-medium border transition ${
+                className={`px-4 py-2 text-sm font-medium border transition sketchy-border-sm ${
                   selectedSize === size
-                    ? "bg-purple-600 text-white border-purple-600"
-                    : "bg-white text-gray-700 border-gray-300 hover:border-purple-400"
+                    ? "bg-primary-600 text-white border-primary-600"
+                    : "bg-warm-50 text-warm-700 border-warm-300 hover:border-primary-400"
                 }`}
               >
                 {size}
@@ -68,20 +68,20 @@ export default function AddToCartButton({ product, disabled }: Props) {
 
       <div className="flex flex-col sm:flex-row gap-4">
         {/* Quantity selector */}
-        <div className="flex items-center border border-gray-300 rounded-lg">
+        <div className="flex items-center sketchy-border-light">
           <button
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            className="px-4 py-3 text-gray-600 hover:text-gray-900 transition"
+            className="px-4 py-3 text-warm-600 hover:text-warm-900 transition"
             disabled={quantity <= 1}
           >
             <Minus size={18} />
           </button>
-          <span className="px-4 py-3 font-medium text-gray-900 min-w-[3rem] text-center">
+          <span className="px-4 py-3 font-medium text-warm-900 min-w-[3rem] text-center">
             {quantity}
           </span>
           <button
             onClick={() => setQuantity(Math.min(product.stock, quantity + 1))}
-            className="px-4 py-3 text-gray-600 hover:text-gray-900 transition"
+            className="px-4 py-3 text-warm-600 hover:text-warm-900 transition"
             disabled={quantity >= product.stock}
           >
             <Plus size={18} />
@@ -92,12 +92,12 @@ export default function AddToCartButton({ product, disabled }: Props) {
         <button
           onClick={handleAddToCart}
           disabled={disabled || added}
-          className={`flex-1 flex items-center justify-center gap-2 py-3 px-8 rounded-full font-medium text-lg transition ${
+          className={`flex-1 flex items-center justify-center gap-2 py-3 px-8 font-medium text-lg transition ${
             added
-              ? "bg-green-600 text-white"
+              ? "bg-accent-600 text-white sketchy-border"
               : disabled
-              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-              : "bg-purple-600 hover:bg-purple-700 text-white"
+              ? "bg-warm-300 text-warm-500 cursor-not-allowed"
+              : "sketchy-border bg-primary-600 hover:bg-primary-700 text-white sketch-shadow-primary"
           }`}
         >
           {added ? (

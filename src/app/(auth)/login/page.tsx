@@ -43,22 +43,22 @@ export default function LoginPage() {
 
   return (
     <div>
-      <h2 className="text-3xl font-bold text-gray-900 mb-2">
+      <h2 className="text-3xl font-marker text-warm-900 mb-2">
         Welcome Back
       </h2>
-      <p className="text-gray-500 mb-8">
+      <p className="font-caveat text-warm-500 text-lg mb-8">
         Sign in to your account to continue shopping
       </p>
 
       {error && (
-        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
+        <div className="sketchy-border-sm bg-red-50 border-red-200 text-red-700 px-4 py-3 mb-6">
           {error}
         </div>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="email" className="block text-sm font-medium text-warm-700 mb-1.5">
             Email Address
           </label>
           <input
@@ -67,13 +67,13 @@ export default function LoginPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition bg-white"
+            className="w-full px-4 py-3 sketchy-border-light border-warm-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition bg-white"
             placeholder="you@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1.5">
+          <label htmlFor="password" className="block text-sm font-medium text-warm-700 mb-1.5">
             Password
           </label>
           <div className="relative">
@@ -83,13 +83,13 @@ export default function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition bg-white pr-12"
+              className="w-full px-4 py-3 sketchy-border-light border-warm-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition bg-white pr-12"
               placeholder="••••••••"
             />
             <button
               type="button"
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-warm-400 hover:text-warm-600"
             >
               {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
             </button>
@@ -99,16 +99,16 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full sketchy-border bg-primary-600 hover:bg-primary-700 text-white py-3 font-medium transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 sketch-shadow-primary"
         >
           {loading && <Loader2 size={20} className="animate-spin" />}
           {loading ? "Signing in..." : "Sign In"}
         </button>
       </form>
 
-      <p className="mt-6 text-center text-gray-500">
+      <p className="mt-6 text-center text-warm-500">
         Don&apos;t have an account?{" "}
-        <Link href="/register" className="text-purple-600 hover:text-purple-700 font-medium">
+        <Link href="/register" className="text-primary-600 hover:text-primary-700 font-medium">
           Create Account
         </Link>
       </p>

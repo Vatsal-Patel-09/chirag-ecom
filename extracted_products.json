@@ -1,0 +1,1125 @@
+{
+  "totalProducts": 119,
+  "categories": 24,
+  "productsByCategory": {
+    "Cotton Linen Shirts": [
+      {
+        "id": "232214",
+        "slug": "/product/solids-blue-men-cotton-linen-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1730352766_5470975.jpg",
+        "name": "Cotton Linen: Deep Blue",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "300280",
+        "slug": "/product/men-linen-shirts-rose-garden",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1753184953_8196988.jpg",
+        "name": "Cotton Linen Utility: Rosewood",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "232213",
+        "slug": "/product/solids-brown-men-cotton-linen-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1747120022_5432359.jpg",
+        "name": "Cotton Linen: Grey Brown",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1299
+      },
+      {
+        "id": "232210",
+        "slug": "/product/solids-orange-men-cotton-linen-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1712574694_1119733.jpg",
+        "name": "Cotton Linen: Coral Peach",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "259122",
+        "slug": "/product/solids-soft-pink-men-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1739878029_1383597.jpg",
+        "name": "Cotton Linen: Soft Pink",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "259119",
+        "slug": "/product/solids-rusty-red-men-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1738154347_6930152.jpg",
+        "name": "Cotton Linen: Russet Brown",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "287284",
+        "slug": "/product/tss-originals-cannoli-cream-men-linen-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1738067130_6501375.jpg",
+        "name": "Cotton Linen: Striped Sienna",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1599,
+        "originalPrice": 1699
+      },
+      {
+        "id": "260541",
+        "slug": "/product/solids-sky-blue-cotton-linen-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1716543492_6546785.jpg",
+        "name": "Cotton Linen: Sky Blue",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "303555",
+        "slug": "/product/cotton-linen-shirts-blue-steel-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1738743277_4539550.jpg",
+        "name": "Cotton Linen Stripes: Azure",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "287859",
+        "slug": "/product/solids-dark-indigo-men-cotton-linen-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1730283592_2313955.jpg",
+        "name": "Cotton Linen: Twilight",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "307656",
+        "slug": "/product/cotton-linen-shirt-shadow-stripes",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1742034685_4861836.jpg",
+        "name": "Cotton Linen Stripes: Nautical",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1599
+      },
+      {
+        "id": "232211",
+        "slug": "/product/solids-red-men-cotton-linen-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1737379310_5546645.jpg",
+        "name": "Cotton Linen: Red",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "259183",
+        "slug": "/product/solids-light-green-mandarin-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1739774935_1647535.jpg",
+        "name": "Cotton Linen: Light Green",
+        "category": "Cotton Linen Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      }
+    ],
+    "Cotton Linen Pants": [
+      {
+        "id": "303727",
+        "slug": "/product/cotton-linen-pants-ecru-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1757572936_8366141.jpg",
+        "name": "Cotton Linen Pants: Ecru",
+        "category": "Cotton Linen Pants",
+        "membershipPrice": 1699,
+        "originalPrice": 1799
+      }
+    ],
+    "Men Rugby Polos": [
+      {
+        "id": "319575",
+        "slug": "/product/stranger-things-hawkins-men-oversized-polo",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769236936_2776330.jpg",
+        "name": "Stranger Things: Hawkins High",
+        "category": "Men Rugby Polos",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      }
+    ],
+    "Men Textured Shirts": [
+      {
+        "id": "250282",
+        "slug": "/product/textured-mulberry-knit-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754715290_9593419.jpg",
+        "name": "Textured Shirt: Mulberry",
+        "category": "Men Textured Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "224338",
+        "slug": "/product/solids-black-knit-shirt-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1691213490_9958577.jpg",
+        "name": "Textured Shirt: Black",
+        "category": "Men Textured Shirts",
+        "membershipPrice": 1549,
+        "originalPrice": 1649
+      },
+      {
+        "id": "275214",
+        "slug": "/product/stripes-cream-blue-men-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1757740776_1140639.jpg",
+        "name": "Stripes: Blue Dune",
+        "category": "Men Textured Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1299
+      },
+      {
+        "id": "251866",
+        "slug": "/product/stripes-sage-knit-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1732256963_1969865.jpg",
+        "name": "Popcorn Stripes: Sage",
+        "category": "Men Textured Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1999
+      },
+      {
+        "id": "285665",
+        "slug": "/product/stripes-blue-white-knit-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1726916724_9673471.jpg",
+        "name": "Popcorn Stripes: Blue Horizon",
+        "category": "Men Textured Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "224333",
+        "slug": "/product/stripes-white-and-green-knit-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1752663989_3450596.jpg",
+        "name": "Textured Stripes: Arctic White",
+        "category": "Men Textured Shirts",
+        "membershipPrice": 1599,
+        "originalPrice": 1699
+      }
+    ],
+    "Men High Top Sneakers": [
+      {
+        "id": "310058",
+        "slug": "/product/ubz-convertible-glow-in-dark-men-high-top-sneakers",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770964536_9754011.jpg",
+        "name": "UBZ Convertible: Luminous",
+        "category": "Men High Top Sneakers",
+        "membershipPrice": 3299,
+        "originalPrice": 3499
+      }
+    ],
+    "Oversized T-Shirts": [
+      {
+        "id": "318721",
+        "slug": "/product/stranger-things-upside-down-spray-men-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg",
+        "name": "Stranger Things: Upside Down",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 849,
+        "originalPrice": 899
+      },
+      {
+        "id": "304341",
+        "slug": "/product/oversized-t-shirts-fcb-match-day",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1750426444_9028342.jpg",
+        "name": "FCB: Numero 10",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "328905",
+        "slug": "/product/garfield-nope-men-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1756964396_9649819.jpg",
+        "name": "Ottoman: Garfield Not My Problem",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "281895",
+        "slug": "/product/batman-logo-men-oversized-half-sleeve-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754297985_8592598.jpg",
+        "name": "Batman: Logo (Reflective)",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "186353",
+        "slug": "/product/kung-fu-panda-master-of-chi-oversized-tshirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1763190255_5396429.jpg",
+        "name": "Kung Fu Panda: Master Of Chi",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 849,
+        "originalPrice": 899
+      },
+      {
+        "id": "278050",
+        "slug": "/product/tss-originals-trident-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1756476946_4773055.jpg",
+        "name": "TSS Originals: Trident",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "345159",
+        "slug": "/product/linkin-park-the-band-men-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768923573_5775909.jpg",
+        "name": "Linkin Park: Breaking The Habit",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1299
+      },
+      {
+        "id": "198840",
+        "slug": "/product/minions-blah-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1727678292_9404417.jpg",
+        "name": "Minions: Blah Blah Blah",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 849,
+        "originalPrice": 899
+      },
+      {
+        "id": "301862",
+        "slug": "/product/men-oversized-t-shirts-batman-classic-logo",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754380967_1447905.jpg",
+        "name": "Batman: Classic Logo",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 999,
+        "originalPrice": 1099
+      },
+      {
+        "id": "334330",
+        "slug": "/product/batman-the-hero-glow-men-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771067690_9165491.gif",
+        "name": "Batman: The Hero Glow",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1299
+      },
+      {
+        "id": "190215",
+        "slug": "/product/black-panther-power-oversized-tshirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759730351_1337432.jpg",
+        "name": "Black Panther: Panther Power",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 949,
+        "originalPrice": 1049
+      },
+      {
+        "id": "309581",
+        "slug": "/product/oversized-t-shirts-kung-fu-panda-master",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1747486084_3696029.jpg",
+        "name": "Kung Fu Panda: Master",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 949,
+        "originalPrice": 1049
+      },
+      {
+        "id": "326174",
+        "slug": "/product/dc-peace-out-men-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1761820245_5596970.jpg",
+        "name": "Peacemaker: Peace Out",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 799,
+        "originalPrice": 849
+      },
+      {
+        "id": "309586",
+        "slug": "/product/oversized-t-shirts-spider-man-oscorp-suit",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1751116998_8805341.jpg",
+        "name": "Spider-Man: Oscorp Suit",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "355602",
+        "slug": "/product/linkin-park-breaking-the-habit-men-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771072734_8540545.jpg",
+        "name": "Linkin Park: Breaking The Habit",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 899,
+        "originalPrice": 999
+      },
+      {
+        "id": "286797",
+        "slug": "/product/naruto-hokage-men-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1737789999_1303600.jpg",
+        "name": "Naruto Shippuden: Hokage Dream",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 899,
+        "originalPrice": 999
+      },
+      {
+        "id": "333385",
+        "slug": "/product/harry-potter-the-map-oversized-tshirt-mens",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1761981512_3153309.gif",
+        "name": "Harry Potter: Marauder's Map (Solar)",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "345158",
+        "slug": "/product/linkin-park-classic-men-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770893225_8898680.jpg",
+        "name": "Linkin Park: Hybrid Theory",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1299
+      },
+      {
+        "id": "200011",
+        "slug": "/product/looney-tunes-magic-mushroom-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1711090682_4204095.jpg",
+        "name": "Looney Tunes: Magic Mushroom",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 849,
+        "originalPrice": 899
+      },
+      {
+        "id": "289900",
+        "slug": "/product/tss-originals-seven-chakras-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1763982276_7610627.jpg",
+        "name": "TSS Originals: Seven Chakras",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1699,
+        "originalPrice": 1799
+      },
+      {
+        "id": "330765",
+        "slug": "/product/oversized-tshirt-blackout-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1758695753_8265055.jpg",
+        "name": "Popcorn Texture: Caviar",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 749,
+        "originalPrice": 799
+      },
+      {
+        "id": "309509",
+        "slug": "/product/oversized-tshirt-harry-potter-sorted-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1751718597_6137634.jpg",
+        "name": "Harry Potter: Sorted",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "315487",
+        "slug": "/product/men-oversized-t-shirts-smiley-winkle",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754734387_3008122.jpg",
+        "name": "S.W.SMILEY: Winkle",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 899,
+        "originalPrice": 999
+      },
+      {
+        "id": "307246",
+        "slug": "/product/tom-and-jerry-chill-jerry-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1751116109_5395197.jpg",
+        "name": "Tom & Jerry: Chill Jerry",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 849,
+        "originalPrice": 999
+      },
+      {
+        "id": "334328",
+        "slug": "/product/flashback-fits-a-90s-kid-men-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769098332_8545649.jpg",
+        "name": "Flashback Fits: A 90's Kid",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 749,
+        "originalPrice": 799
+      },
+      {
+        "id": "342109",
+        "slug": "/product/oversized-t-shirt-indie-elephant-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769593687_7127628.jpg",
+        "name": "TSS Originals: Indie Elephant",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 799,
+        "originalPrice": 899
+      },
+      {
+        "id": "312480",
+        "slug": "/product/men-oversized-fit-ben-omnitrix-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1750415838_4107800.jpg",
+        "name": "Ben 10: Omnitrix",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 999,
+        "originalPrice": 1099
+      },
+      {
+        "id": "321838",
+        "slug": "/product/oversized-tshirt-asura-bomma-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754388518_3457720.gif",
+        "name": "Oversized T-Shirt: Asura Bomma",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 999,
+        "originalPrice": 1099
+      },
+      {
+        "id": "272733",
+        "slug": "/product/tss-originals-lets-sail-oversized-tshirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1729952911_4113341.jpg",
+        "name": "TSS Originals: Let's Sail",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "326166",
+        "slug": "/product/freedom-brahmastra-men-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1755150438_1228920.jpg",
+        "name": "Freedom: Brahmastra",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "214244",
+        "slug": "/product/hulk-the-incredible-oversized-tshirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1725359693_6999728.jpg",
+        "name": "Hulk: The Incredible",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 899,
+        "originalPrice": 999
+      },
+      {
+        "id": "337118",
+        "slug": "/product/peanuts-snoopy-in-india-men-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769147321_3407965.jpg",
+        "name": "Peanuts: Snoopy In India",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "212818",
+        "slug": "/product/deadpool-great-irresponsibility-oversized-tshirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1753250438_8192947.jpg",
+        "name": "Deadpool: Great Irresponsibility",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 899,
+        "originalPrice": 949
+      },
+      {
+        "id": "337134",
+        "slug": "/product/south-park-eric-men-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769242523_4555484.jpg",
+        "name": "South Park: Eric Cartman",
+        "category": "Oversized T-Shirts",
+        "membershipPrice": 799,
+        "originalPrice": 899
+      }
+    ],
+    "Men Low Top Sneakers": [
+      {
+        "id": "310085",
+        "slug": "/product/van-guard-beige-men-low-top-sneakers",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770467378_3371828.jpg",
+        "name": "Milano: Walnut",
+        "category": "Men Low Top Sneakers",
+        "membershipPrice": 2399,
+        "originalPrice": 2499
+      },
+      {
+        "id": "258682",
+        "slug": "/product/tss-originals-wavy-black-men-low-top-sneakers",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764846323_3420893.jpg",
+        "name": "Urban Blaze: Mafia",
+        "category": "Men Low Top Sneakers",
+        "membershipPrice": 2499,
+        "originalPrice": 2599
+      },
+      {
+        "id": "287840",
+        "slug": "/product/ubz-cappucino-men-low-top-sneakers",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764224768_6038083.jpg",
+        "name": "Urban Blaze: Cappuccino",
+        "category": "Men Low Top Sneakers",
+        "membershipPrice": 2399,
+        "originalPrice": 2499
+      },
+      {
+        "id": "299210",
+        "slug": "/product/men-low-top-sneakers-ubz-reverb-xl-stormtrooper",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1749821650_4227161.jpg",
+        "name": "Star Wars: Stormtrooper",
+        "category": "Men Low Top Sneakers",
+        "membershipPrice": 2399,
+        "originalPrice": 2499
+      },
+      {
+        "id": "287848",
+        "slug": "/product/ubz-tokyo-men-low-top-sneakers",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764845446_6930844.jpg",
+        "name": "Urban Blaze: Tokyo",
+        "category": "Men Low Top Sneakers",
+        "membershipPrice": 2499,
+        "originalPrice": 2599
+      },
+      {
+        "id": "301808",
+        "slug": "/product/men-low-top-sneakers-ubz-x-doodlemapuls",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768710992_8152254.jpg",
+        "name": "UBZ x Doodle Mapuls",
+        "category": "Men Low Top Sneakers",
+        "membershipPrice": 2799,
+        "originalPrice": 2999
+      },
+      {
+        "id": "266500",
+        "slug": "/product/urban-blaze-buttery-yellow-mens-low-top-shoes",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764844504_5535387.jpg",
+        "name": "Urban Blaze: Latte",
+        "category": "Men Low Top Sneakers",
+        "membershipPrice": 2499,
+        "originalPrice": 2599
+      }
+    ],
+    "Super Oversized T-Shirts": [
+      {
+        "id": "305669",
+        "slug": "/product/super-oversized-t-shirts-nomad-phoenix",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769075509_6135520.jpg",
+        "name": "Nomad: Phoenix",
+        "category": "Super Oversized T-Shirts",
+        "membershipPrice": 1899,
+        "originalPrice": 1999
+      },
+      {
+        "id": "290499",
+        "slug": "/product/tss-originals-kurukshetra-super-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1743657072_4845052.jpg",
+        "name": "TSS Originals: Kurukshetra",
+        "category": "Super Oversized T-Shirts",
+        "membershipPrice": 1699,
+        "originalPrice": 1799
+      },
+      {
+        "id": "282432",
+        "slug": "/product/nomad-compass-oversized-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1742976621_3048761.jpg",
+        "name": "Nomad: Compass",
+        "category": "Super Oversized T-Shirts",
+        "membershipPrice": 2199,
+        "originalPrice": 2299
+      },
+      {
+        "id": "315326",
+        "slug": "/product/men-super-oversized-t-shirt-kaal-chakra",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1756525677_3953968.jpg",
+        "name": "TSS Originals: Kaal Chakra",
+        "category": "Super Oversized T-Shirts",
+        "membershipPrice": 1599,
+        "originalPrice": 1699
+      },
+      {
+        "id": "312990",
+        "slug": "/product/harry-potter-the-silent-vow-super-oversized-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1755880153_8401247.jpg",
+        "name": "Harry Potter: The Silent Vow",
+        "category": "Super Oversized T-Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1649
+      }
+    ],
+    "Oversized Polos": [
+      {
+        "id": "256089",
+        "slug": "/product/harry-potter-hogwarts-oversized-polos",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1731309919_8272206.jpg",
+        "name": "Jacquard Polo: Harry Potter Hogwarts",
+        "category": "Oversized Polos",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "286397",
+        "slug": "/product/tss-originals-blue-fox-men-oversized-polos",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1751475635_4620563.jpg",
+        "name": "Jacquard: Blue Retro",
+        "category": "Oversized Polos",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "337090",
+        "slug": "/product/oversized-t-shirts-gravity-mens",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771069003_2698580.jpg",
+        "name": "Solids: Gravity",
+        "category": "Oversized Polos",
+        "membershipPrice": 899,
+        "originalPrice": 999
+      },
+      {
+        "id": "293065",
+        "slug": "/product/oversized-polos-tss-originals-bommai",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1752308747_2323782.jpg",
+        "name": "TSS Originals: Bommai",
+        "category": "Oversized Polos",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      }
+    ],
+    "Polos": [
+      {
+        "id": "249818",
+        "slug": "/product/men-polos-solids-black",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1739256050_8755343.jpg",
+        "name": "Solids: Raven Black",
+        "category": "Polos",
+        "membershipPrice": 899,
+        "originalPrice": 999
+      },
+      {
+        "id": "313513",
+        "slug": "/product/jacquard-polo-blue-soul-polos",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1766733771_7163302.jpg",
+        "name": "TSS Originals: Blue Soul",
+        "category": "Polos",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "305528",
+        "slug": "/product/fcb-barca-men-polos",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754742647_8442698.jpg",
+        "name": "FCB: Retro",
+        "category": "Polos",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "257643",
+        "slug": "/product/tss-originals-mr-soul-men-oversized-polos",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1762405062_4560708.jpg",
+        "name": "TSS Originals: Mr. Soul",
+        "category": "Polos",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      }
+    ],
+    "Oversized Shirts": [
+      {
+        "id": "298188",
+        "slug": "/product/holiday-shirts-state-of-mind",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1757573026_4940350.jpg",
+        "name": "Oversized Shirt: State Of Mind",
+        "category": "Oversized Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "319578",
+        "slug": "/product/textured-shirt-eggshell-men-oversized-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1767339300_1866450.jpg",
+        "name": "Textured Shirt: Eggshell",
+        "category": "Oversized Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      }
+    ],
+    "Holiday Shirts": [
+      {
+        "id": "298184",
+        "slug": "/product/holiday-shirts-harry-potter-magic",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1746599643_3105082.jpg",
+        "name": "Harry Potter: Hogwarts Grid",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "217667",
+        "slug": "/product/iron-man-summer-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1745997769_6249238.jpg",
+        "name": "Iron Man: Pattern",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "298187",
+        "slug": "/product/holiday-shirts-earth-bound",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1749461559_4620939.jpg",
+        "name": "TSS Originals: Hometown",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1449,
+        "originalPrice": 1549
+      },
+      {
+        "id": "300282",
+        "slug": "/product/men-holiday-shirts-indie-olive",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1755227453_6537821.jpg",
+        "name": "Textured Shirt: Indie Olive",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "288392",
+        "slug": "/product/venom-logo-oversized-shirts-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1744389529_7123437.jpg",
+        "name": "Venom: Pure Destruction",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "255153",
+        "slug": "/product/tss-originals-summer-vibe-printed-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1725688933_5421896.jpg",
+        "name": "TSS Originals: Summer Vibe",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      },
+      {
+        "id": "304907",
+        "slug": "/product/holiday-shirts-top-gun-aviator",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754388854_6264300.jpg",
+        "name": "Top Gun: Aviator",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "262725",
+        "slug": "/product/black-panther-map-of-wakanda-men-summer-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1722234500_3185180.jpg",
+        "name": "Black Panther: Map Of Wakanda",
+        "category": "Holiday Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      }
+    ],
+    "Men Utility Shirts": [
+      {
+        "id": "256682",
+        "slug": "/product/solids-off-white-men-utility-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1709982174_6944472.jpg",
+        "name": "Solids: Off White",
+        "category": "Men Utility Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "294246",
+        "slug": "/product/plaid-grey-beige-men-utility-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764660274_2193914.jpg",
+        "name": "Plaid: Greyscale",
+        "category": "Men Utility Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      }
+    ],
+    "Oversized Full Sleeve T-Shirts": [
+      {
+        "id": "273607",
+        "slug": "/product/tss-originals-true-navy-oversized-full-sleeve-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1726315197_8300692.jpg",
+        "name": "TSS Originals: True Navy",
+        "category": "Oversized Full Sleeve T-Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1299
+      },
+      {
+        "id": "286241",
+        "slug": "/product/naruto-symbol-of-konoha-men-oversized-full-sleeve-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1738129944_9654264.jpg",
+        "name": "Naruto Shippuden: Konoha Leaf",
+        "category": "Oversized Full Sleeve T-Shirts",
+        "membershipPrice": 1199,
+        "originalPrice": 1299
+      },
+      {
+        "id": "319561",
+        "slug": "/product/tss-originals-level-up-men-oversized-full-sleeve-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771059607_4321450.jpg",
+        "name": "TSS Originals: Level Up",
+        "category": "Oversized Full Sleeve T-Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "286243",
+        "slug": "/product/batman-dark-knight-men-oversized-full-sleeve-t-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771057818_8126878.jpg",
+        "name": "Batman: Dark Knight",
+        "category": "Oversized Full Sleeve T-Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "208834",
+        "slug": "/product/ombre-midnight-blue-oversized-full-sleeve-tshirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1712640237_9675569.jpg",
+        "name": "Ombre: Midnight Blue",
+        "category": "Oversized Full Sleeve T-Shirts",
+        "membershipPrice": 1099,
+        "originalPrice": 1199
+      },
+      {
+        "id": "280791",
+        "slug": "/product/oversized-full-sleeves-tshirts-tss-originals-glow",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1745857137_4330212.jpg",
+        "name": "Doctor Sleeve: Campus Classic",
+        "category": "Oversized Full Sleeve T-Shirts",
+        "membershipPrice": 1299,
+        "originalPrice": 1399
+      }
+    ],
+    "Men Flannel Shackets": [
+      {
+        "id": "332119",
+        "slug": "/product/plaid-shacket-cabin-core-men-flannel-shackets",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771066016_8048250.jpg",
+        "name": "Plaid Shacket: Cabin Core",
+        "category": "Men Flannel Shackets",
+        "membershipPrice": 1799,
+        "originalPrice": 1899
+      }
+    ],
+    "Men Relaxed Shirts": [
+      {
+        "id": "333541",
+        "slug": "/product/plaid-shirt-coral-men-utility-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771067192_1519210.jpg",
+        "name": "Plaid Shirt: Coral",
+        "category": "Men Relaxed Shirts",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      },
+      {
+        "id": "247286",
+        "slug": "/product/plaid-brown-mustard-and-black-men-relaxed-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764070787_8244371.jpg",
+        "name": "Dark Topaz (Plaid)",
+        "category": "Men Relaxed Shirts",
+        "membershipPrice": 1599,
+        "originalPrice": 1699
+      },
+      {
+        "id": "332598",
+        "slug": "/product/striped-shirt-cherry-wood-men-relaxed-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771066502_9469467.jpg",
+        "name": "Striped Shirt: Cherry Wood",
+        "category": "Men Relaxed Shirts",
+        "membershipPrice": 1599,
+        "originalPrice": 1699
+      },
+      {
+        "id": "320778",
+        "slug": "/product/stripe-shirt-buckle-men-relaxed-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770703959_7862209.jpg",
+        "name": "Oxford Stripes : Sky Blue",
+        "category": "Men Relaxed Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "200525",
+        "slug": "/product/checks-black-and-red-men-oversized-shirt",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764065235_9951930.jpg",
+        "name": "Plaid: Black And Red",
+        "category": "Men Relaxed Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "334784",
+        "slug": "/product/relaxed-fit-shirt-valour-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768035263_3293817.jpg",
+        "name": "Twill Shirt: Valour",
+        "category": "Men Relaxed Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      }
+    ],
+    "Bomber Jackets": [
+      {
+        "id": "351014",
+        "slug": "/product/superman-man-of-steel-men-bomber-jacket",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771071390_6851777.jpg",
+        "name": "Superman: Man Of Steel",
+        "category": "Bomber Jackets",
+        "membershipPrice": 3299,
+        "originalPrice": 3499
+      }
+    ],
+    "Men Cargo Jeans": [
+      {
+        "id": "249826",
+        "slug": "/product/solids-light-beige-straight-fit-men-pants",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1758178603_9631039.jpg",
+        "name": "Solids: Light Beige (Straight Fit)",
+        "category": "Men Cargo Jeans",
+        "membershipPrice": 2399,
+        "originalPrice": 2499
+      },
+      {
+        "id": "354955",
+        "slug": "/product/straight-fit-denim-slate-grey-men-cargo-jeans",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770461018_2275105.jpg",
+        "name": "Straight-Fit Denim: Slate Grey",
+        "category": "Men Cargo Jeans",
+        "membershipPrice": 2199,
+        "originalPrice": 2299
+      },
+      {
+        "id": "311315",
+        "slug": "/product/mens-cargo-jeans-white",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1763365375_3391871.jpg",
+        "name": "Men's Cargo Jeans: White",
+        "category": "Men Cargo Jeans",
+        "membershipPrice": 2499,
+        "originalPrice": 2599
+      }
+    ],
+    "Men Jeans": [
+      {
+        "id": "323219",
+        "slug": "/product/baggy-fit-denim-drift-away-mens-jeans",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771060745_9920992.jpg",
+        "name": "Straight-Fit Denim: Drift Away",
+        "category": "Men Jeans",
+        "membershipPrice": 2399,
+        "originalPrice": 2499
+      },
+      {
+        "id": "268367",
+        "slug": "/product/denim-snow-white-slim-fit-men-jeans",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759747356_8212803.jpg",
+        "name": "Denim: Ivory",
+        "category": "Men Jeans",
+        "membershipPrice": 1899,
+        "originalPrice": 1999
+      },
+      {
+        "id": "216328",
+        "slug": "/product/solids-mid-blue-wash-men-jeans",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1683989689_2997060.jpg",
+        "name": "Solids: Mid Blue Wash (Straight Fit)",
+        "category": "Men Jeans",
+        "membershipPrice": 1899,
+        "originalPrice": 1999
+      },
+      {
+        "id": "261032",
+        "slug": "/product/denim-light-blue-straight-fit",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1757075743_1039624.jpg",
+        "name": "Denim: Light Blue (Straight Fit)",
+        "category": "Men Jeans",
+        "membershipPrice": 1949,
+        "originalPrice": 2049
+      }
+    ],
+    "Denim Shirts": [
+      {
+        "id": "274774",
+        "slug": "/product/classic-denim-shirt-blue-men-relaxed-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1724478566_4473996.jpg",
+        "name": "Classic Denim Shirt: Blue",
+        "category": "Denim Shirts",
+        "membershipPrice": 1849,
+        "originalPrice": 1949
+      }
+    ],
+    "Shirts": [
+      {
+        "id": "313705",
+        "slug": "/product/men-slim-fit-shirt-lilac-stripes",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1766486553_5722690.jpg",
+        "name": "Oxford Stripes: Pink Mirage",
+        "category": "Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      },
+      {
+        "id": "232519",
+        "slug": "/product/plaid-blue-and-white-men-utility-shirts",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1739791588_8675755.jpg",
+        "name": "Plaid: Blue And White",
+        "category": "Shirts",
+        "membershipPrice": 1399,
+        "originalPrice": 1499
+      }
+    ],
+    "Men Shackets": [
+      {
+        "id": "332126",
+        "slug": "/product/oversized-shacket-green-screen-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768972909_1970746.jpg",
+        "name": "Colourblock Shacket: Olive",
+        "category": "Men Shackets",
+        "membershipPrice": 1499,
+        "originalPrice": 1599
+      }
+    ],
+    "Men Oversized Hoodies": [
+      {
+        "id": "270779",
+        "slug": "/product/batman-dark-knight-men-oversized-hoodie",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1764327058_5045006.jpg",
+        "name": "Batman: Dark Knight",
+        "category": "Men Oversized Hoodies",
+        "membershipPrice": 2499,
+        "originalPrice": 2599
+      }
+    ],
+    "Chino Pants": [
+      {
+        "id": "336764",
+        "slug": "/product/chino-pants-chrome-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770047299_3108221.jpg",
+        "name": "Chino Pants: Steel Grey",
+        "category": "Chino Pants",
+        "membershipPrice": 1599,
+        "originalPrice": 1699
+      },
+      {
+        "id": "332592",
+        "slug": "/product/chino-pants-cocoa-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770210770_8946725.jpg",
+        "name": "Chino Pants: Cocoa Brown",
+        "category": "Chino Pants",
+        "membershipPrice": 1799,
+        "originalPrice": 1899
+      },
+      {
+        "id": "332591",
+        "slug": "/product/chino-pants-walnuts-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768895111_1436340.jpg",
+        "name": "Chino Pants: Walnut Brown",
+        "category": "Chino Pants",
+        "membershipPrice": 1799,
+        "originalPrice": 1899
+      },
+      {
+        "id": "332484",
+        "slug": "/product/chino-pants-pebble-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768540854_5857640.jpg",
+        "name": "Chino Pants: Pebble Grey",
+        "category": "Chino Pants",
+        "membershipPrice": 1799,
+        "originalPrice": 1899
+      },
+      {
+        "id": "336763",
+        "slug": "/product/chino-pants-almond-men",
+        "imageUrl": "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768895369_9782128.jpg",
+        "name": "Chino Pants: Almond White",
+        "category": "Chino Pants",
+        "membershipPrice": 1799,
+        "originalPrice": 1899
+      }
+    ]
+  }
+}

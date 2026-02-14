@@ -67,53 +67,51 @@ export default async function ProductDetailPage({ params }: Props) {
     // Fallback for when DB not connected
     product = {
       id: "fallback",
-      name: "Classic Cotton Crew Neck",
+      name: "Stranger Things: Upside Down",
       slug: slug,
       description:
-        "Premium 100% organic cotton t-shirt with a relaxed fit. Perfect for everyday wear or layering. Features reinforced stitching and a soft, breathable fabric that gets better with every wash.",
-      price: "24.99",
-      compareAtPrice: "34.99",
+        "Premium oversized t-shirt with a relaxed drop-shoulder fit. Made from 100% cotton with 240 GSM fabric weight for a structured drape. Features ribbed crew neck and side-seam construction.",
+      price: "849",
+      compareAtPrice: "899",
       images: [
-        `/images/product/1.jpg`,
-        `/images/product/2.jpg`,
-        `/images/product/3.jpg`,
+        "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg",
       ],
       stock: 50,
-      material: "100% Organic Cotton",
-      sizes: ["S", "M", "L", "XL"],
-      color: "Black",
+      material: "100% Cotton, 240 GSM",
+      sizes: ["S", "M", "L", "XL", "XXL"],
+      color: "Multi",
       isFeatured: true,
       categoryId: "1",
     };
-    category = { name: "Men", slug: "men" };
+    category = { name: "T-Shirts", slug: "t-shirts" };
     relatedProducts = [
       {
         id: "2",
-        name: "White Essential Tee",
-        slug: "white-essential-tee",
-        price: "22.99",
-        images: ["/images/product/3.jpg"],
+        name: "Deadpool: Samurai",
+        slug: "deadpool-samurai-men-oversized-tshirts",
+        price: "849",
+        images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1756032069_5891792.jpg"],
       },
       {
         id: "3",
-        name: "Navy Blue Henley",
-        slug: "navy-blue-henley",
-        price: "29.99",
-        images: ["/images/product/5.jpg"],
+        name: "Gojo: After Dark",
+        slug: "jujutsu-kaisen-gojo-after-dark-men-oversized-tshirt",
+        price: "849",
+        images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1763961989_3714652.jpg"],
       },
       {
         id: "4",
-        name: "Burgundy Premium Tee",
-        slug: "burgundy-premium-tee",
-        price: "34.99",
-        images: ["/images/product/7.jpg"],
+        name: "Iron Man: Armored Avenger",
+        slug: "iron-man-armoured-avenger-men-oversized-tshirts",
+        price: "849",
+        images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769075396_5416099.jpg"],
       },
     ];
   }
 
   const productImages: string[] = Array.isArray(product.images)
     ? product.images
-    : ["/images/product/1.jpg"];
+    : ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg"];
   const price =
     typeof product.price === "string"
       ? parseFloat(product.price)
@@ -125,56 +123,56 @@ export default async function ProductDetailPage({ params }: Props) {
     : null;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
       {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8">
-        <Link href="/" className="hover:text-purple-600 transition">
+      <nav className="flex items-center gap-2 text-sm text-warm-500 font-caveat mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap">
+        <Link href="/" className="hover:text-primary-600 transition">
           Home
         </Link>
-        <span>/</span>
-        <Link href="/products" className="hover:text-purple-600 transition">
+        <span>~&gt;</span>
+        <Link href="/products" className="hover:text-primary-600 transition">
           Shop
         </Link>
         {category && (
           <>
-            <span>/</span>
+            <span>~&gt;</span>
             <Link
               href={`/products?category=${category.slug}`}
-              className="hover:text-purple-600 transition"
+              className="hover:text-primary-600 transition"
             >
               {category.name}
             </Link>
           </>
         )}
-        <span>/</span>
-        <span className="text-gray-900">{product.name}</span>
+        <span>~&gt;</span>
+        <span className="text-warm-900">{product.name}</span>
       </nav>
 
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
         {/* Product Gallery */}
         <ProductGalleryClient images={productImages} name={product.name} />
 
         {/* Product Info */}
         <div>
           {product.isFeatured && (
-            <span className="inline-block bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full mb-3">
+            <span className="inline-block cartoon-badge bg-secondary-200 text-warm-800 text-xs font-medium px-3 py-1 mb-3">
               Bestseller
             </span>
           )}
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold font-marker text-warm-900 mb-4">
             {product.name}
           </h1>
 
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-3xl font-bold text-gray-900">
+            <span className="text-3xl font-bold text-warm-900 hand-circle">
               {formatPrice(price)}
             </span>
             {comparePrice && (
               <>
-                <span className="text-xl text-gray-400 line-through">
+                <span className="text-xl text-warm-400 line-through">
                   {formatPrice(comparePrice)}
                 </span>
-                <span className="bg-red-100 text-red-700 text-sm font-medium px-2 py-0.5 rounded">
+                <span className="cartoon-badge bg-primary-100 text-primary-700 text-sm font-medium px-2 py-0.5">
                   {Math.round(((comparePrice - price) / comparePrice) * 100)}%
                   OFF
                 </span>
@@ -182,26 +180,26 @@ export default async function ProductDetailPage({ params }: Props) {
             )}
           </div>
 
-          <p className="text-gray-600 leading-relaxed mb-8">
+          <p className="text-warm-600 leading-relaxed mb-8">
             {product.description}
           </p>
 
           {/* Details */}
-          <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
             {product.material && (
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-sm text-gray-500">Material</p>
-                <p className="font-medium text-gray-900">{product.material}</p>
+              <div className="bg-warm-100 p-4 sketchy-border-light">
+                <p className="text-sm text-warm-500 font-caveat">Material</p>
+                <p className="font-medium text-warm-900">{product.material}</p>
               </div>
             )}
             {product.color && (
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-sm text-gray-500">Color</p>
-                <p className="font-medium text-gray-900">{product.color}</p>
+              <div className="bg-warm-100 p-4 sketchy-border-light">
+                <p className="text-sm text-warm-500 font-caveat">Color</p>
+                <p className="font-medium text-warm-900">{product.color}</p>
               </div>
             )}
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="text-sm text-gray-500">Availability</p>
+            <div className="bg-warm-100 p-4 sketchy-border-light">
+              <p className="text-sm text-warm-500 font-caveat">Availability</p>
               <p
                 className={`font-medium ${
                   product.stock > 0 ? "text-green-600" : "text-red-600"
@@ -231,9 +229,9 @@ export default async function ProductDetailPage({ params }: Props) {
 
           {/* Trust badges */}
           <div className="mt-8 grid grid-cols-2 gap-3">
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
+            <div className="flex items-center gap-2 text-warm-500 font-caveat text-sm">
               <svg
-                className="w-5 h-5 text-green-500"
+                className="w-5 h-5 text-accent-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -245,11 +243,11 @@ export default async function ProductDetailPage({ params }: Props) {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              Free Shipping above $50
+              Free Shipping above Rs.999
             </div>
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
+            <div className="flex items-center gap-2 text-warm-500 font-caveat text-sm">
               <svg
-                className="w-5 h-5 text-green-500"
+                className="w-5 h-5 text-accent-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -263,9 +261,9 @@ export default async function ProductDetailPage({ params }: Props) {
               </svg>
               Premium Quality Cotton
             </div>
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
+            <div className="flex items-center gap-2 text-warm-500 font-caveat text-sm">
               <svg
-                className="w-5 h-5 text-green-500"
+                className="w-5 h-5 text-accent-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -279,9 +277,9 @@ export default async function ProductDetailPage({ params }: Props) {
               </svg>
               30-Day Returns
             </div>
-            <div className="flex items-center gap-2 text-gray-500 text-sm">
+            <div className="flex items-center gap-2 text-warm-500 font-caveat text-sm">
               <svg
-                className="w-5 h-5 text-green-500"
+                className="w-5 h-5 text-accent-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -302,7 +300,7 @@ export default async function ProductDetailPage({ params }: Props) {
       {/* Related Products */}
       {relatedProducts.length > 0 && (
         <section className="mt-20">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+          <h2 className="text-2xl font-bold font-marker hand-underline inline-block text-warm-900 mb-8">
             You May Also Like
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -310,7 +308,7 @@ export default async function ProductDetailPage({ params }: Props) {
               const rpImg =
                 Array.isArray(rp.images) && rp.images.length > 0
                   ? rp.images[0]
-                  : "/images/product/1.jpg";
+                  : "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg";
               const rpPrice =
                 typeof rp.price === "string"
                   ? parseFloat(rp.price)
@@ -321,7 +319,7 @@ export default async function ProductDetailPage({ params }: Props) {
                   href={`/products/${rp.slug}`}
                   className="group"
                 >
-                  <div className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 mb-3">
+                  <div className="relative aspect-square sketchy-border-light overflow-hidden bg-warm-100 mb-3">
                     <Image
                       src={rpImg}
                       alt={rp.name}
@@ -329,10 +327,10 @@ export default async function ProductDetailPage({ params }: Props) {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="font-medium text-gray-900 group-hover:text-purple-600 transition line-clamp-1 text-sm">
+                  <h3 className="font-medium text-warm-900 group-hover:text-primary-600 transition line-clamp-1 text-sm">
                     {rp.name}
                   </h3>
-                  <p className="font-bold text-gray-900 text-sm mt-1">
+                  <p className="font-bold text-warm-900 text-sm mt-1">
                     {formatPrice(rpPrice)}
                   </p>
                 </Link>

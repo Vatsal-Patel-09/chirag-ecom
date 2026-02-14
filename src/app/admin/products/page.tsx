@@ -35,29 +35,29 @@ export default async function AdminProductsPage() {
     <div>
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Products</h1>
-          <p className="text-gray-500 text-sm mt-1">
+          <h1 className="text-2xl font-bold font-marker text-warm-900">Products</h1>
+          <p className="text-warm-500 text-sm mt-1">
             {allProducts.length} products
           </p>
         </div>
         <Link
           href="/admin/products/new"
-          className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition"
+          className="flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white px-4 py-2.5 rounded-lg text-sm font-medium transition"
         >
           <Plus size={16} /> Add Product
         </Link>
       </div>
 
       {allProducts.length === 0 ? (
-        <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
-          <Package size={48} className="mx-auto text-gray-300 mb-4" />
-          <p className="text-gray-500">No products yet.</p>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-12 text-center">
+          <Package size={48} className="mx-auto text-warm-300 mb-4" />
+          <p className="text-warm-500">No products yet.</p>
         </div>
       ) : (
-        <div className="bg-white rounded-xl border border-gray-200 overflow-x-auto">
+        <div className="bg-warm-50 rounded-xl border border-warm-200 overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-left text-gray-500 border-b border-gray-100">
+              <tr className="text-left text-warm-500 border-b border-warm-100">
                 <th className="px-6 py-3 font-medium">Product</th>
                 <th className="px-6 py-3 font-medium">Category</th>
                 <th className="px-6 py-3 font-medium">Price</th>
@@ -71,15 +71,15 @@ export default async function AdminProductsPage() {
                 const img =
                   product.images && product.images.length > 0
                     ? product.images[0]
-                    : "/images/product/1.jpg";
+                    : "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg";
                 return (
                   <tr
                     key={product.id}
-                    className="border-b border-gray-50 hover:bg-gray-50 transition"
+                    className="border-b border-warm-100 hover:bg-warm-100 transition"
                   >
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+                        <div className="relative w-12 h-12 rounded-lg overflow-hidden bg-warm-200 flex-shrink-0">
                           <Image
                             src={img}
                             alt={product.name}
@@ -88,19 +88,19 @@ export default async function AdminProductsPage() {
                           />
                         </div>
                         <div className="min-w-0">
-                          <p className="font-medium text-gray-900 truncate max-w-[200px]">
+                          <p className="font-medium text-warm-900 truncate max-w-[200px]">
                             {product.name}
                           </p>
                           {product.isFeatured && (
-                            <span className="text-xs text-purple-600 font-medium">
+                            <span className="text-xs text-primary-600 font-medium">
                               Featured
                             </span>
                           )}
                         </div>
                       </div>
                     </td>
-                    <td className="px-6 py-4 text-gray-600">
-                      {product.categoryName || "—"}
+                    <td className="px-6 py-4 text-warm-600">
+                      {product.categoryName || "\u2014"}
                     </td>
                     <td className="px-6 py-4">
                       {product.compareAtPrice ? (
@@ -108,7 +108,7 @@ export default async function AdminProductsPage() {
                           <span className="font-medium text-red-600">
                             {formatPrice(parseFloat(product.price))}
                           </span>
-                          <span className="text-gray-400 line-through text-xs ml-1">
+                          <span className="text-warm-400 line-through text-xs ml-1">
                             {formatPrice(parseFloat(product.compareAtPrice))}
                           </span>
                         </div>
@@ -123,7 +123,7 @@ export default async function AdminProductsPage() {
                         className={`font-medium ${
                           product.stock <= 5
                             ? "text-red-600"
-                            : "text-gray-900"
+                            : "text-warm-900"
                         }`}
                       >
                         {product.stock}
@@ -134,7 +134,7 @@ export default async function AdminProductsPage() {
                         className={`text-xs font-medium px-2 py-1 rounded-full ${
                           product.isActive
                             ? "bg-green-100 text-green-700"
-                            : "bg-gray-100 text-gray-500"
+                            : "bg-warm-200 text-warm-500"
                         }`}
                       >
                         {product.isActive ? "Active" : "Inactive"}
@@ -144,7 +144,7 @@ export default async function AdminProductsPage() {
                       <div className="flex items-center gap-2">
                         <Link
                           href={`/admin/products/${product.id}/edit`}
-                          className="text-purple-600 hover:text-purple-700 p-1.5 rounded-lg hover:bg-purple-50 transition"
+                          className="text-primary-600 hover:text-primary-700 p-1.5 rounded-lg hover:bg-primary-50 transition"
                         >
                           <Edit size={16} />
                         </Link>

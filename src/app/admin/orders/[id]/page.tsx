@@ -52,18 +52,18 @@ export default async function AdminOrderDetailPage({ params }: Props) {
     <div className="max-w-4xl">
       <Link
         href="/admin/orders"
-        className="inline-flex items-center gap-2 text-gray-500 hover:text-purple-600 transition mb-6 text-sm"
+        className="inline-flex items-center gap-2 text-warm-500 hover:text-primary-600 transition mb-6 text-sm"
       >
         <ArrowLeft size={16} /> Back to Orders
       </Link>
 
       <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold font-marker text-warm-900">
             {order.orderNumber}
           </h1>
-          <p className="text-gray-500 text-sm mt-1">
-            {new Date(order.createdAt).toLocaleDateString("en-US",
+          <p className="text-warm-500 text-sm mt-1">
+            {new Date(order.createdAt).toLocaleDateString("en-IN", {
               day: "numeric",
               month: "long",
               year: "numeric",
@@ -77,44 +77,44 @@ export default async function AdminOrderDetailPage({ params }: Props) {
 
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         {/* Customer */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-900 mb-3">Customer</h2>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-6">
+          <h2 className="font-semibold text-warm-900 mb-3">Customer</h2>
           {customer ? (
-            <div className="text-sm text-gray-600">
-              <p className="font-medium text-gray-900">{customer.name}</p>
+            <div className="text-sm text-warm-600">
+              <p className="font-medium text-warm-900">{customer.name}</p>
               <p>{customer.email}</p>
             </div>
           ) : (
-            <p className="text-gray-500 text-sm">Unknown customer</p>
+            <p className="text-warm-500 text-sm">Unknown customer</p>
           )}
         </div>
 
         {/* Shipping */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
-          <h2 className="font-semibold text-gray-900 mb-3">Shipping Address</h2>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-6">
+          <h2 className="font-semibold text-warm-900 mb-3">Shipping Address</h2>
           {addr ? (
-            <div className="text-sm text-gray-600">
-              <p className="font-medium text-gray-900">{addr.fullName}</p>
+            <div className="text-sm text-warm-600">
+              <p className="font-medium text-warm-900">{addr.fullName}</p>
               <p>{addr.addressLine1}</p>
               {addr.addressLine2 && <p>{addr.addressLine2}</p>}
               <p>{addr.city}, {addr.state} {addr.postalCode}</p>
               <p>Phone: {addr.phone}</p>
             </div>
           ) : (
-            <p className="text-gray-500 text-sm">No address</p>
+            <p className="text-warm-500 text-sm">No address</p>
           )}
         </div>
       </div>
 
       {/* Items */}
-      <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
-        <h2 className="font-semibold text-gray-900 mb-4">
+      <div className="bg-warm-50 rounded-xl border border-warm-200 p-6 mb-6">
+        <h2 className="font-semibold text-warm-900 mb-4">
           Items ({items.length})
         </h2>
         <div className="space-y-4">
           {items.map((item: any) => (
             <div key={item.id} className="flex items-center gap-4">
-              <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+              <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-warm-200 flex-shrink-0">
                 <Image
                   src={item.productImage}
                   alt={item.productName}
@@ -123,22 +123,22 @@ export default async function AdminOrderDetailPage({ params }: Props) {
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-medium text-gray-900 text-sm">
+                <p className="font-medium text-warm-900 text-sm">
                   {item.productName}
                 </p>
-                <p className="text-gray-500 text-xs">
+                <p className="text-warm-500 text-xs">
                   Qty: {item.quantity} × {formatPrice(parseFloat(item.price))}
                 </p>
               </div>
-              <p className="font-semibold text-gray-900 text-sm">
+              <p className="font-semibold text-warm-900 text-sm">
                 {formatPrice(parseFloat(item.price) * item.quantity)}
               </p>
             </div>
           ))}
         </div>
-        <div className="border-t border-gray-200 mt-4 pt-4 flex justify-between">
-          <span className="font-semibold text-gray-900">Total</span>
-          <span className="font-bold text-lg text-gray-900">
+        <div className="border-t border-warm-200 mt-4 pt-4 flex justify-between">
+          <span className="font-semibold text-warm-900">Total</span>
+          <span className="font-bold text-lg text-warm-900">
             {formatPrice(parseFloat(order.total))}
           </span>
         </div>

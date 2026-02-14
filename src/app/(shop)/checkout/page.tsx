@@ -24,7 +24,7 @@ export default function CheckoutPage() {
     city: "",
     state: "",
     postalCode: "",
-    country: "US",
+    country: "IN",
     phone: "",
   });
 
@@ -92,17 +92,17 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="max-w-7xl mx-auto px-4 py-20 text-center">
-        <ShoppingBag size={64} className="mx-auto text-gray-300 mb-6" />
-        <h1 className="text-2xl font-bold text-gray-900 mb-3">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 py-20 text-center">
+        <ShoppingBag size={64} className="mx-auto text-warm-300 mb-6" />
+        <h1 className="text-2xl font-bold font-marker text-warm-900 mb-3">
           Your Cart is Empty
         </h1>
-        <p className="text-gray-500 mb-8">
+        <p className="text-warm-500 mb-8">
           Add some items to your cart before checking out.
         </p>
         <Link
           href="/products"
-          className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-medium transition"
+          className="inline-block sketchy-border bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 font-medium transition"
         >
           Browse Products
         </Link>
@@ -111,22 +111,22 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">
+    <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+      <h1 className="text-3xl font-bold font-marker text-warm-900 mb-8">
         Checkout
       </h1>
 
       {/* Step indicators */}
       <div className="flex items-center gap-4 mb-10">
-        <div className={`flex items-center gap-2 ${step >= 1 ? "text-purple-600" : "text-gray-400"}`}>
-          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${step >= 1 ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-500"}`}>
+        <div className={`flex items-center gap-2 ${step >= 1 ? "text-primary-600" : "text-warm-400"}`}>
+          <div className={`w-8 h-8 sketchy-border-sm flex items-center justify-center text-sm font-bold ${step >= 1 ? "bg-primary-600 text-white" : "bg-warm-200 text-warm-500"}`}>
             {step > 1 ? <Check size={16} /> : "1"}
           </div>
           <span className="font-medium text-sm hidden sm:block">Shipping</span>
         </div>
-        <div className="flex-1 h-px bg-gray-200" />
-        <div className={`flex items-center gap-2 ${step >= 2 ? "text-purple-600" : "text-gray-400"}`}>
-          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${step >= 2 ? "bg-purple-600 text-white" : "bg-gray-200 text-gray-500"}`}>
+        <div className="flex-1 h-px bg-warm-200" />
+        <div className={`flex items-center gap-2 ${step >= 2 ? "text-primary-600" : "text-warm-400"}`}>
+          <div className={`w-8 h-8 sketchy-border-sm flex items-center justify-center text-sm font-bold ${step >= 2 ? "bg-primary-600 text-white" : "bg-warm-200 text-warm-500"}`}>
             2
           </div>
           <span className="font-medium text-sm hidden sm:block">Review & Pay</span>
@@ -137,102 +137,102 @@ export default function CheckoutPage() {
         {/* Main content */}
         <div className="lg:col-span-2">
           {step === 1 && (
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
+            <div className="bg-warm-50 sketchy-border-light p-6">
               <div className="flex items-center gap-3 mb-6">
-                <MapPin size={24} className="text-purple-600" />
-                <h2 className="text-xl font-semibold text-gray-900">
+                <MapPin size={24} className="text-primary-600" />
+                <h2 className="text-xl font-semibold text-warm-900">
                   Shipping Address
                 </h2>
               </div>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm font-medium text-warm-700 mb-1.5">
                     Full Name *
                   </label>
                   <input
                     name="fullName"
                     value={address.fullName}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 sketchy-border-light bg-warm-50 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                     placeholder="John Doe"
                   />
                 </div>
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm font-medium text-warm-700 mb-1.5">
                     Address Line 1 *
                   </label>
                   <input
                     name="addressLine1"
                     value={address.addressLine1}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 sketchy-border-light bg-warm-50 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                     placeholder="House/Flat No., Street"
                   />
                 </div>
                 <div className="md:col-span-2">
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm font-medium text-warm-700 mb-1.5">
                     Address Line 2
                   </label>
                   <input
                     name="addressLine2"
                     value={address.addressLine2}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                    className="w-full px-4 py-3 sketchy-border-light bg-warm-50 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                     placeholder="Landmark, Area"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm font-medium text-warm-700 mb-1.5">
                     City *
                   </label>
                   <input
                     name="city"
                     value={address.city}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
-                    placeholder="New York"
+                    className="w-full px-4 py-3 sketchy-border-light bg-warm-50 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                    placeholder="Mumbai"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm font-medium text-warm-700 mb-1.5">
                     State *
                   </label>
                   <input
                     name="state"
                     value={address.state}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
-                    placeholder="New York"
+                    className="w-full px-4 py-3 sketchy-border-light bg-warm-50 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                    placeholder="Maharashtra"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm font-medium text-warm-700 mb-1.5">
                     Postal Code *
                   </label>
                   <input
                     name="postalCode"
                     value={address.postalCode}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
-                    placeholder="10001"
+                    className="w-full px-4 py-3 sketchy-border-light bg-warm-50 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                    placeholder="400001"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                  <label className="block text-sm font-medium text-warm-700 mb-1.5">
                     Phone *
                   </label>
                   <input
                     name="phone"
                     value={address.phone}
                     onChange={handleAddressChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
-                    placeholder="+1 (555) 123-4567"
+                    className="w-full px-4 py-3 sketchy-border-light bg-warm-50 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+                    placeholder="+91 98765 43210"
                   />
                 </div>
               </div>
               <button
                 onClick={handleContinue}
-                className="mt-6 w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition"
+                className="mt-6 w-full sketchy-border bg-primary-600 hover:bg-primary-700 text-white py-3 font-medium transition"
               >
                 Continue to Review
               </button>
@@ -242,20 +242,20 @@ export default function CheckoutPage() {
           {step === 2 && (
             <div className="space-y-6">
               {/* Address review */}
-              <div className="bg-white border border-gray-200 rounded-xl p-6">
+              <div className="bg-warm-50 sketchy-border-light p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-lg font-semibold text-gray-900">
+                  <h2 className="text-lg font-semibold text-warm-900">
                     Shipping Address
                   </h2>
                   <button
                     onClick={() => setStep(1)}
-                    className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+                    className="text-primary-600 hover:text-primary-700 text-sm font-medium"
                   >
                     Edit
                   </button>
                 </div>
-                <div className="text-gray-600 text-sm leading-relaxed">
-                  <p className="font-medium text-gray-900">{address.fullName}</p>
+                <div className="text-warm-600 text-sm leading-relaxed">
+                  <p className="font-medium text-warm-900">{address.fullName}</p>
                   <p>{address.addressLine1}</p>
                   {address.addressLine2 && <p>{address.addressLine2}</p>}
                   <p>{address.city}, {address.state} {address.postalCode}</p>
@@ -265,14 +265,14 @@ export default function CheckoutPage() {
               </div>
 
               {/* Items review */}
-              <div className="bg-white border border-gray-200 rounded-xl p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="bg-warm-50 sketchy-border-light p-6">
+                <h2 className="text-lg font-semibold text-warm-900 mb-4">
                   Order Items ({items.length})
                 </h2>
                 <div className="space-y-3">
                   {items.map((item) => (
                     <div key={item.productId} className="flex items-center gap-4">
-                      <div className="relative w-16 h-16 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+                      <div className="relative w-16 h-16 sketchy-border-sm overflow-hidden bg-warm-100 flex-shrink-0">
                         <Image
                           src={item.image}
                           alt={item.name}
@@ -281,12 +281,12 @@ export default function CheckoutPage() {
                         />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="font-medium text-gray-900 text-sm line-clamp-1">
+                        <p className="font-medium text-warm-900 text-sm line-clamp-1">
                           {item.name}
                         </p>
-                        <p className="text-gray-500 text-sm">Size: {item.size} &middot; Qty: {item.quantity}</p>
+                        <p className="text-warm-500 text-sm">Size: {item.size} &middot; Qty: {item.quantity}</p>
                       </div>
-                      <p className="font-medium text-gray-900 text-sm">
+                      <p className="font-medium text-warm-900 text-sm">
                         {formatPrice(item.price * item.quantity)}
                       </p>
                     </div>
@@ -297,7 +297,7 @@ export default function CheckoutPage() {
               <button
                 onClick={handlePlaceOrder}
                 disabled={loading}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-4 rounded-lg font-medium text-lg transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full sketchy-border bg-primary-600 hover:bg-primary-700 sketch-shadow-primary text-white py-4 font-medium text-lg transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
                 {loading && <Loader2 size={20} className="animate-spin" />}
                 {loading ? "Placing Order..." : "Place Order"}
@@ -308,30 +308,30 @@ export default function CheckoutPage() {
 
         {/* Summary sidebar */}
         <div className="lg:col-span-1">
-          <div className="bg-gray-50 rounded-xl p-6 sticky top-28">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+          <div className="bg-warm-100 sketchy-border p-6 sticky top-28">
+            <h2 className="font-caveat text-xl font-semibold text-warm-900 mb-4">
               Order Summary
             </h2>
             <div className="space-y-3 text-sm">
               <div className="flex justify-between">
-                <span className="text-gray-500">
+                <span className="text-warm-500">
                   Items ({items.reduce((acc, i) => acc + i.quantity, 0)})
                 </span>
                 <span className="font-medium">{formatPrice(total)}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-500">Shipping</span>
+                <span className="text-warm-500">Shipping</span>
                 <span className="font-medium">
                   {shipping === 0 ? (
-                    <span className="text-green-600">Free</span>
+                    <span className="text-accent-600">Free</span>
                   ) : (
                     formatPrice(shipping)
                   )}
                 </span>
               </div>
-              <div className="border-t border-gray-200 pt-3 flex justify-between">
-                <span className="font-semibold text-gray-900">Total</span>
-                <span className="font-bold text-lg text-gray-900">
+              <div className="border-t border-warm-200 pt-3 flex justify-between">
+                <span className="font-semibold text-warm-900">Total</span>
+                <span className="font-bold text-lg text-warm-900">
                   {formatPrice(orderTotal)}
                 </span>
               </div>

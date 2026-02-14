@@ -7,7 +7,7 @@ import { formatPrice } from "@/lib/utils";
 
 export default async function FeaturedProducts() {
   let featuredProducts: any[] = [];
-  
+
   try {
     featuredProducts = await db
       .select()
@@ -17,25 +17,25 @@ export default async function FeaturedProducts() {
   } catch {
     // DB not connected yet, use placeholder data
     featuredProducts = [
-      { id: "1", name: "Classic Black Crew Neck", slug: "classic-black-crew-neck", price: "24.99", compareAtPrice: null, images: ["/images/product/1.jpg"], isFeatured: true },
-      { id: "2", name: "White Essential Tee", slug: "white-essential-tee", price: "22.99", compareAtPrice: null, images: ["/images/product/3.jpg"], isFeatured: true },
-      { id: "3", name: "Navy Blue Henley", slug: "navy-blue-henley", price: "29.99", compareAtPrice: null, images: ["/images/product/5.jpg"], isFeatured: true },
-      { id: "4", name: "Burgundy Premium Tee", slug: "burgundy-premium-tee", price: "34.99", compareAtPrice: null, images: ["/images/product/12.jpg"], isFeatured: true },
-      { id: "5", name: "Blush Pink Relaxed Fit", slug: "blush-pink-relaxed-fit", price: "26.99", compareAtPrice: null, images: ["/images/product/18.jpg"], isFeatured: true },
-      { id: "6", name: "Heavyweight Black Tee", slug: "heavyweight-black-tee", price: "34.99", compareAtPrice: null, images: ["/images/product/36.jpg"], isFeatured: true },
-      { id: "7", name: "Dri-Fit Training Tee", slug: "dri-fit-training-tee", price: "34.99", compareAtPrice: null, images: ["/images/product/49.jpg"], isFeatured: true },
-      { id: "8", name: "Pima Cotton Luxury Tee", slug: "pima-cotton-luxury-tee", price: "49.99", compareAtPrice: null, images: ["/images/product/3.jpg"], isFeatured: true },
+      { id: "1", name: "Stranger Things: Upside Down", slug: "stranger-things-upside-down-spray-men-oversized-tshirt", price: "849", compareAtPrice: "899", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg"], isFeatured: true },
+      { id: "2", name: "Cotton Linen: Deep Blue", slug: "solids-blue-men-cotton-linen-shirts", price: "1399", compareAtPrice: "1499", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1730352766_5470975.jpg"], isFeatured: true },
+      { id: "3", name: "Stranger Things: Hawkins High", slug: "stranger-things-hawkins-men-oversized-polo", price: "1399", compareAtPrice: "1499", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769236936_2776330.jpg"], isFeatured: true },
+      { id: "4", name: "UBZ Convertible: Luminous", slug: "ubz-convertible-glow-in-dark-men-high-top-sneakers", price: "3299", compareAtPrice: "3499", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1770964536_9754011.jpg"], isFeatured: true },
+      { id: "5", name: "Holiday Print: Tropical Vibes", slug: "holiday-shirt-tropical-vibes", price: "1299", compareAtPrice: "1399", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1753098937_4780598.jpg"], isFeatured: true },
+      { id: "6", name: "Cargo Jeans: Washed Black", slug: "cargo-jeans-washed-black", price: "1999", compareAtPrice: "2199", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1757572640_6478293.jpg"], isFeatured: true },
+      { id: "7", name: "Nomad: Phoenix", slug: "super-oversized-t-shirts-nomad-phoenix", price: "1899", compareAtPrice: "1999", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769075509_6135520.jpg"], isFeatured: true },
+      { id: "8", name: "Bomber Jacket: Midnight Black", slug: "bomber-jacket-midnight-black", price: "2499", compareAtPrice: "2799", images: ["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1753098843_9517382.jpg"], isFeatured: true },
     ];
   }
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-16 bg-warm-50">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-warm-900 mb-3 font-marker hand-underline inline-block">
             Our Bestsellers
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="text-warm-500 font-caveat text-lg max-w-2xl mx-auto mt-4">
             Handpicked favourites loved by our customers
           </p>
         </div>
@@ -43,7 +43,7 @@ export default async function FeaturedProducts() {
           {featuredProducts.map((product) => {
             const imageUrl = Array.isArray(product.images) && product.images.length > 0
               ? product.images[0]
-              : "/images/product/1.jpg";
+              : "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg";
             const price = typeof product.price === "string" ? parseFloat(product.price) : product.price;
             const comparePrice = product.compareAtPrice
               ? typeof product.compareAtPrice === "string"
@@ -56,7 +56,7 @@ export default async function FeaturedProducts() {
                 href={`/products/${product.slug}`}
                 className="group"
               >
-                <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-100 mb-3">
+                <div className="relative aspect-square sketchy-border-light overflow-hidden bg-warm-100 mb-3">
                   <Image
                     src={imageUrl}
                     alt={product.name}
@@ -64,20 +64,20 @@ export default async function FeaturedProducts() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {comparePrice && (
-                    <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    <span className="absolute top-3 left-3 cartoon-badge bg-primary-500 text-white text-xs px-2 py-1 font-medium">
                       Sale
                     </span>
                   )}
                 </div>
-                <h3 className="font-medium text-gray-900 group-hover:text-purple-600 transition line-clamp-1">
+                <h3 className="font-medium text-warm-900 group-hover:text-primary-600 transition line-clamp-1">
                   {product.name}
                 </h3>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="font-bold text-gray-900">
+                  <span className="font-bold text-warm-900 hand-circle">
                     {formatPrice(price)}
                   </span>
                   {comparePrice && (
-                    <span className="text-gray-400 line-through text-sm">
+                    <span className="text-warm-400 line-through text-sm">
                       {formatPrice(comparePrice)}
                     </span>
                   )}
@@ -89,7 +89,7 @@ export default async function FeaturedProducts() {
         <div className="text-center mt-10">
           <Link
             href="/products"
-            className="inline-block border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-full font-medium transition"
+            className="sketchy-border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white sketch-shadow-sm px-8 py-3 font-medium transition inline-block"
           >
             View All Products
           </Link>

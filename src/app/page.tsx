@@ -10,9 +10,9 @@ import Footer from "@/components/layout/Footer";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
       <Navbar />
-      <main>
+      <main className="flex-1">
         <Hero />
         <TrustBar />
         <CategoryShowcase />
@@ -22,6 +22,6 @@ export default function HomePage() {
         <InstagramFeed />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

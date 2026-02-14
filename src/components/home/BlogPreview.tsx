@@ -34,19 +34,24 @@ const posts = [
 
 export default function BlogPreview() {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="paper-bg py-16">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-warm-900 mb-3 font-marker hand-underline inline-block">
             From Our Journal
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="text-warm-500 font-caveat text-lg max-w-2xl mx-auto mt-4">
             Stories, tips, and inspiration from the world of fashion
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {posts.map((post) => (
-            <article key={post.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition group">
+          {posts.map((post, index) => (
+            <article
+              key={post.id}
+              className={`bg-warm-50 sketchy-border-light overflow-hidden hover:sketch-shadow-sm transition group ${
+                index % 2 === 0 ? "tilt-1" : "tilt-2"
+              }`}
+            >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={post.image}
@@ -56,11 +61,11 @@ export default function BlogPreview() {
                 />
               </div>
               <div className="p-5">
-                <p className="text-purple-600 text-sm font-medium mb-2">{post.date}</p>
-                <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2 group-hover:text-purple-600 transition">
+                <p className="text-primary-500 font-caveat text-sm font-medium mb-2">{post.date}</p>
+                <h3 className="font-semibold text-warm-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition">
                   {post.title}
                 </h3>
-                <p className="text-gray-500 text-sm line-clamp-2">{post.excerpt}</p>
+                <p className="text-warm-500 text-sm line-clamp-2">{post.excerpt}</p>
               </div>
             </article>
           ))}

@@ -49,28 +49,28 @@ export default async function AccountPage() {
   const statusColors: Record<string, string> = {
     pending: "bg-yellow-100 text-yellow-700",
     confirmed: "bg-blue-100 text-blue-700",
-    shipped: "bg-purple-100 text-purple-700",
+    shipped: "bg-accent-100 text-accent-700",
     delivered: "bg-green-100 text-green-700",
     cancelled: "bg-red-100 text-red-700",
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">
+    <div className="max-w-5xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+      <h1 className="text-3xl font-bold font-marker text-warm-900 mb-8">
         My Account
       </h1>
 
       {/* Profile card */}
-      <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+      <div className="bg-warm-50 sketchy-border-light p-6 mb-8">
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
-            <User size={28} className="text-purple-600" />
+          <div className="w-16 h-16 bg-primary-100 sketchy-border-sm flex items-center justify-center">
+            <User size={28} className="text-primary-600" />
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-gray-900">
+            <h2 className="text-xl font-semibold text-warm-900">
               {user?.name || session.user.name || "Customer"}
             </h2>
-            <p className="text-gray-500">{user?.email || session.user.email}</p>
+            <p className="text-warm-500">{user?.email || session.user.email}</p>
           </div>
         </div>
       </div>
@@ -79,67 +79,67 @@ export default async function AccountPage() {
       <div className="grid sm:grid-cols-3 gap-4 mb-8">
         <Link
           href="/orders"
-          className="bg-white border border-gray-200 rounded-xl p-5 hover:border-purple-300 hover:shadow-sm transition group"
+          className="bg-warm-50 sketchy-border-light p-5 hover:border-primary-300 hover:sketch-shadow-sm transition group"
         >
           <div className="flex items-center justify-between mb-3">
-            <Package size={24} className="text-purple-600" />
-            <ChevronRight size={18} className="text-gray-400 group-hover:text-purple-600 transition" />
+            <Package size={24} className="text-primary-600" />
+            <ChevronRight size={18} className="text-warm-400 group-hover:text-primary-600 transition" />
           </div>
-          <p className="text-2xl font-bold text-gray-900">{orderCount}</p>
-          <p className="text-gray-500 text-sm">Total Orders</p>
+          <p className="text-2xl font-bold text-warm-900">{orderCount}</p>
+          <p className="text-warm-500 text-sm">Total Orders</p>
         </Link>
         <Link
           href="/account/addresses"
-          className="bg-white border border-gray-200 rounded-xl p-5 hover:border-purple-300 hover:shadow-sm transition group"
+          className="bg-warm-50 sketchy-border-light p-5 hover:border-primary-300 hover:sketch-shadow-sm transition group"
         >
           <div className="flex items-center justify-between mb-3">
-            <MapPin size={24} className="text-purple-600" />
-            <ChevronRight size={18} className="text-gray-400 group-hover:text-purple-600 transition" />
+            <MapPin size={24} className="text-primary-600" />
+            <ChevronRight size={18} className="text-warm-400 group-hover:text-primary-600 transition" />
           </div>
-          <p className="text-2xl font-bold text-gray-900">{addressCount}</p>
-          <p className="text-gray-500 text-sm">Saved Addresses</p>
+          <p className="text-2xl font-bold text-warm-900">{addressCount}</p>
+          <p className="text-warm-500 text-sm">Saved Addresses</p>
         </Link>
         <Link
           href="/products"
-          className="bg-white border border-gray-200 rounded-xl p-5 hover:border-purple-300 hover:shadow-sm transition group"
+          className="bg-warm-50 sketchy-border-light p-5 hover:border-primary-300 hover:sketch-shadow-sm transition group"
         >
           <div className="flex items-center justify-between mb-3">
-            <ShoppingBag size={24} className="text-purple-600" />
-            <ChevronRight size={18} className="text-gray-400 group-hover:text-purple-600 transition" />
+            <ShoppingBag size={24} className="text-primary-600" />
+            <ChevronRight size={18} className="text-warm-400 group-hover:text-primary-600 transition" />
           </div>
-          <p className="text-2xl font-bold text-gray-900">Browse</p>
-          <p className="text-gray-500 text-sm">Continue Shopping</p>
+          <p className="text-2xl font-bold text-warm-900">Browse</p>
+          <p className="text-warm-500 text-sm">Continue Shopping</p>
         </Link>
       </div>
 
       {/* Recent orders */}
-      <div className="bg-white border border-gray-200 rounded-xl p-6">
+      <div className="bg-warm-50 sketchy-border-light p-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-900">Recent Orders</h2>
+          <h2 className="text-lg font-semibold text-warm-900">Recent Orders</h2>
           {orderCount > 3 && (
             <Link
               href="/orders"
-              className="text-purple-600 hover:text-purple-700 text-sm font-medium"
+              className="text-primary-600 hover:text-primary-700 text-sm font-medium"
             >
               View All
             </Link>
           )}
         </div>
         {recentOrders.length === 0 ? (
-          <p className="text-gray-500 text-sm py-4">No orders yet.</p>
+          <p className="text-warm-500 text-sm py-4">No orders yet.</p>
         ) : (
           <div className="space-y-3">
             {recentOrders.map((order: any) => (
               <Link
                 key={order.id}
                 href={`/orders/${order.id}`}
-                className="flex items-center justify-between py-3 border-b border-gray-100 last:border-0 hover:bg-gray-50 -mx-2 px-2 rounded-lg transition"
+                className="flex items-center justify-between py-3 border-b border-warm-200 last:border-0 hover:bg-warm-100 -mx-2 px-2 rounded-lg transition"
               >
                 <div>
-                  <p className="font-medium text-gray-900 text-sm">
+                  <p className="font-medium text-warm-900 text-sm">
                     {order.orderNumber}
                   </p>
-                  <p className="text-gray-400 text-xs">
+                  <p className="text-warm-400 text-xs">
                     {new Date(order.createdAt).toLocaleDateString("en-IN", {
                       day: "numeric",
                       month: "short",
@@ -149,13 +149,13 @@ export default async function AccountPage() {
                 </div>
                 <div className="flex items-center gap-3">
                   <span
-                    className={`text-xs font-medium px-2 py-0.5 rounded-full capitalize ${
+                    className={`cartoon-badge text-xs font-medium px-2 py-0.5 capitalize ${
                       statusColors[order.status] || "bg-gray-100 text-gray-600"
                     }`}
                   >
                     {order.status}
                   </span>
-                  <span className="font-semibold text-sm text-gray-900">
+                  <span className="font-semibold text-sm text-warm-900">
                     {formatPrice(parseFloat(order.total))}
                   </span>
                 </div>

@@ -27,7 +27,7 @@ export default function NewProductPage() {
     isFeatured: false,
     isActive: true,
   });
-  const [images, setImages] = useState<string[]>(["/images/product/1.jpg"]);
+  const [images, setImages] = useState<string[]>(["https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg"]);
   const [newImage, setNewImage] = useState("");
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
 
@@ -95,32 +95,32 @@ export default function NewProductPage() {
     <div className="max-w-3xl">
       <Link
         href="/admin/products"
-        className="inline-flex items-center gap-2 text-gray-500 hover:text-purple-600 transition mb-6 text-sm"
+        className="inline-flex items-center gap-2 text-warm-500 hover:text-primary-600 transition mb-6 text-sm"
       >
         <ArrowLeft size={16} /> Back to Products
       </Link>
 
-      <h1 className="text-2xl font-bold text-gray-900 mb-8">
+      <h1 className="text-2xl font-bold font-marker text-warm-900 mb-8">
         Add New Product
       </h1>
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 mb-2">Basic Info</h2>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-6 space-y-4">
+          <h2 className="font-semibold text-warm-900 mb-2">Basic Info</h2>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-warm-700 mb-1">
               Product Name *
             </label>
             <input
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
               placeholder="Classic Cotton T-Shirt"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-warm-700 mb-1">
               Description
             </label>
             <textarea
@@ -128,19 +128,19 @@ export default function NewProductPage() {
               value={form.description}
               onChange={handleChange}
               rows={4}
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none resize-none"
+              className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none resize-none"
               placeholder="Describe the product..."
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-warm-700 mb-1">
               Category *
             </label>
             <select
               name="categoryId"
               value={form.categoryId}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
             >
               <option value="">Select Category</option>
               {categories.map((cat) => (
@@ -151,31 +151,31 @@ export default function NewProductPage() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-warm-700 mb-1">
               Material / Fabric
             </label>
             <input
               name="material"
               value={form.material}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
               placeholder="100% Cotton, Polyester Blend..."
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-warm-700 mb-1">
               Color
             </label>
             <input
               name="color"
               value={form.color}
               onChange={handleChange}
-              className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+              className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
               placeholder="Black, White, Navy..."
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-warm-700 mb-2">
               Sizes
             </label>
             <div className="flex flex-wrap gap-3">
@@ -191,46 +191,46 @@ export default function NewProductPage() {
                         setSelectedSizes((prev) => prev.filter((s) => s !== size));
                       }
                     }}
-                    className="accent-purple-600"
+                    className="accent-primary-600"
                   />
-                  <span className="text-sm text-gray-700">{size}</span>
+                  <span className="text-sm text-warm-700">{size}</span>
                 </label>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 mb-2">Pricing & Stock</h2>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-6 space-y-4">
+          <h2 className="font-semibold text-warm-900 mb-2">Pricing & Stock</h2>
           <div className="grid md:grid-cols-3 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Price ($) *
+              <label className="block text-sm font-medium text-warm-700 mb-1">
+                Price (\u20b9) *
               </label>
               <input
                 name="price"
                 type="number"
                 value={form.price}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="29.99"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Sale Price ($)
+              <label className="block text-sm font-medium text-warm-700 mb-1">
+                Compare Price (\u20b9)
               </label>
               <input
                 name="compareAtPrice"
                 type="number"
                 value={form.compareAtPrice}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
                 placeholder="24.99"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-sm font-medium text-warm-700 mb-1">
                 Stock
               </label>
               <input
@@ -238,25 +238,25 @@ export default function NewProductPage() {
                 type="number"
                 value={form.stock}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
+                className="w-full px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
               />
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
-          <h2 className="font-semibold text-gray-900 mb-2">Images</h2>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-6 space-y-4">
+          <h2 className="font-semibold text-warm-900 mb-2">Images</h2>
           <div className="flex flex-wrap gap-2 mb-3">
             {images.map((img, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 bg-gray-100 px-3 py-1.5 rounded-lg text-sm"
+                className="flex items-center gap-2 bg-warm-200 px-3 py-1.5 rounded-lg text-sm"
               >
                 <span className="truncate max-w-[200px]">{img}</span>
                 <button
                   type="button"
                   onClick={() => removeImage(i)}
-                  className="text-gray-400 hover:text-red-500"
+                  className="text-warm-400 hover:text-red-500"
                 >
                   <X size={14} />
                 </button>
@@ -267,30 +267,30 @@ export default function NewProductPage() {
             <input
               value={newImage}
               onChange={(e) => setNewImage(e.target.value)}
-              className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none"
-              placeholder="/images/product/1.jpg"
+              className="flex-1 px-4 py-2.5 border border-warm-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none"
+              placeholder="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/..."
             />
             <button
               type="button"
               onClick={addImage}
-              className="px-4 py-2.5 bg-gray-200 hover:bg-gray-300 rounded-lg transition"
+              className="px-4 py-2.5 bg-warm-200 hover:bg-warm-300 rounded-lg transition"
             >
               <Plus size={16} />
             </button>
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-3">
-          <h2 className="font-semibold text-gray-900 mb-2">Options</h2>
+        <div className="bg-warm-50 rounded-xl border border-warm-200 p-6 space-y-3">
+          <h2 className="font-semibold text-warm-900 mb-2">Options</h2>
           <label className="flex items-center gap-2 cursor-pointer">
             <input
               type="checkbox"
               name="isFeatured"
               checked={form.isFeatured}
               onChange={handleChange}
-              className="accent-purple-600"
+              className="accent-primary-600"
             />
-            <span className="text-sm text-gray-700">Featured Product</span>
+            <span className="text-sm text-warm-700">Featured Product</span>
           </label>
           <label className="flex items-center gap-2 cursor-pointer">
             <input
@@ -298,16 +298,16 @@ export default function NewProductPage() {
               name="isActive"
               checked={form.isActive}
               onChange={handleChange}
-              className="accent-purple-600"
+              className="accent-primary-600"
             />
-            <span className="text-sm text-gray-700">Active (visible on store)</span>
+            <span className="text-sm text-warm-700">Active (visible on store)</span>
           </label>
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition disabled:opacity-50 flex items-center justify-center gap-2"
+          className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg font-medium transition disabled:opacity-50 flex items-center justify-center gap-2"
         >
           {loading && <Loader2 size={18} className="animate-spin" />}
           {loading ? "Creating..." : "Create Product"}

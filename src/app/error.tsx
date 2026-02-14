@@ -16,18 +16,18 @@ export default function Error({
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center">
-        <h1 className="text-6xl font-bold text-gray-300 mb-4">
+        <h1 className="text-6xl font-bold font-marker text-warm-300 mb-4">
           Oops!
         </h1>
-        <h2 className="text-xl font-semibold text-gray-900 mb-3">
+        <h2 className="text-xl font-semibold text-warm-900 mb-3">
           Something went wrong
         </h2>
-        <p className="text-gray-500 mb-8">
+        <p className="text-warm-500 mb-8">
           Don&apos;t worry, please try again.
         </p>
         <button
           onClick={reset}
-          className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-medium transition"
+          className="sketchy-border bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 font-medium transition"
         >
           Try Again
         </button>
