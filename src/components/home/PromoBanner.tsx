@@ -9,7 +9,7 @@ export default function PromoBanner() {
           {/* Banner 1 */}
           <div className="relative h-[300px] md:h-[400px] sketchy-border overflow-hidden sketch-shadow group">
             <Image
-              src="/images/banner/bg-2.jpg"
+              src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1759595763_7509683.jpg"
               alt="New Collection"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -33,7 +33,7 @@ export default function PromoBanner() {
           {/* Banner 2 */}
           <div className="relative h-[300px] md:h-[400px] sketchy-border overflow-hidden sketch-shadow group">
             <Image
-              src="/images/banner/bg-3.jpg"
+              src="https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1769075509_6135520.jpg"
               alt="Special Offer"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"

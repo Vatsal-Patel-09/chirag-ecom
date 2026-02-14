@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Instagram } from "lucide-react";
 
 const images = [
-  "/images/instagram/insta-1.jpg",
-  "/images/instagram/insta-2.jpg",
-  "/images/instagram/insta-3.jpg",
-  "/images/instagram/insta-4.jpg",
-  "/images/instagram/insta-5.jpg",
-  "/images/instagram/insta-6.jpg",
+  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1754297985_8592598.jpg",
+  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1763190255_5396429.jpg",
+  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1768923573_5775909.jpg",
+  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1763961989_3714652.jpg",
+  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1725603614_2139506.jpg",
+  "https://prod-img.thesouledstore.com/public/theSoul/uploads/catalog/product/1771067690_9165491.gif",
 ];
 
 export default function InstagramFeed() {
