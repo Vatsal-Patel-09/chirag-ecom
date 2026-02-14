@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 const protectedRoutes = ["/checkout", "/orders", "/account"];
 const adminRoutes = ["/admin"];
 const authRoutes = ["/login", "/register"];
-const publicRoutes = ["/", "/products", "/cart"];
+const publicRoutes = ["/", "/products", "/cart", "/faq", "/contact", "/wishlist"];
 
 export default auth((req) => {
   const { nextUrl } = req;
